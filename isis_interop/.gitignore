@@ -1,0 +1,6 @@
+# Nokia SR OS license: never commit it
+license.txt
+*.lic
+*.license
+# containerlab runtime directory
+clab-*/

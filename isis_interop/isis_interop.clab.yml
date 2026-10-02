@@ -1,0 +1,49 @@
+name: isis-interop
+
+topology:
+  kinds:
+    nokia_sros:
+      image: vrnetlab/nokia_sros:24.10.R3
+      license: license.txt  # your Nokia SR OS vSIM license, not included (see README)
+      type: >-
+        cp: cpu=2 min_ram=4 chassis=sr-7 slot=A card=cpm5 ___ lc: cpu=4
+        min_ram=4 max_nics=10 chassis=sr-7 slot=1 card=iom4-e-b
+        mda/1=me40-1gb-csfp
+    juniper_vjunosrouter:
+      image: vrnetlab/juniper_vjunos-router:23.4R2-S6.9
+
+  nodes:
+    l2core:
+      kind: linux
+      image: quay.io/frrouting/frr:10.2.5
+      mgmt-ipv4: 172.20.20.101
+      binds:
+        - configs/l2core/daemons:/etc/frr/daemons
+        - configs/l2core/frr.conf:/etc/frr/frr.conf
+    l1frr:
+      kind: linux
+      image: quay.io/frrouting/frr:10.2.5
+      mgmt-ipv4: 172.20.20.105
+      binds:
+        - configs/l1frr/daemons:/etc/frr/daemons
+        - configs/l1frr/frr.conf:/etc/frr/frr.conf
+      exec:
+        - ip route del default dev eth0
+    border:
+      kind: nokia_sros
+      mgmt-ipv4: 172.20.20.102
+      startup-config: configs/border.partial.cfg
+    l1nokia:
+      kind: nokia_sros
+      mgmt-ipv4: 172.20.20.103
+      startup-config: configs/l1nokia.partial.cfg
+    l1junos:
+      kind: juniper_vjunosrouter
+      mgmt-ipv4: 172.20.20.104
+      startup-config: configs/l1junos.conf
+
+  links:
+    - endpoints: ["l2core:eth1", "border:1/1/1"]
+    - endpoints: ["border:1/1/2", "l1nokia:1/1/1"]
+    - endpoints: ["border:1/1/3", "l1junos:ge-0/0/0"]
+    - endpoints: ["border:1/1/4", "l1frr:eth1"]
