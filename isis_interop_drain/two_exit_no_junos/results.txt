@@ -1,0 +1,65 @@
+Two-exit lab without Junos, 2026-10-06: SR-SIM 26.3.R1, FRR 10.2.5.
+Each mode was set on border-frr (router isis LAB), then state.sh ran 40 seconds later.
+Next hops: 10.1.x.x is border-srsim, 10.2.x.x is border-frr.
+
+### border-frr: none
+- l1-srsim:
+0.0.0.0/0                                     Remote  ISIS      00h00m24s  15
+       10.1.1.1                                                     10
+0.0.0.0/0                                     Remote  ISIS      00h00m24s  15
+       10.2.1.1                                                     10
+No. of Routes: 2
+border-frr.00-00                        0x3       0x2084   1172     L1L2 ATT
+- l1-frr:
+  * 10.1.3.1, via eth1, weight 1
+  * 10.2.3.1, via eth2, weight 1
+border-frr.00-00          129   0x00000003  0x2084    1172    1/0/0
+
+### border-frr: set-overload-bit
+- l1-srsim:
+0.0.0.0/0                                     Remote  ISIS      00h00m38s  15
+       10.1.1.1                                                     10
+No. of Routes: 1
+border-frr.00-00                        0x4       0x227d   1138     L1L2 ATT
+                                                                    OV
+- l1-frr:
+  * 10.1.3.1, via eth1, weight 1
+  * 10.2.3.1, via eth2, weight 1
+border-frr.00-00          129   0x00000004  0x227d    1138    1/0/1
+
+### border-frr: set-overload-bit + no attached-bit send
+- l1-srsim:
+0.0.0.0/0                                     Remote  ISIS      00h01m24s  15
+       10.1.1.1                                                     10
+No. of Routes: 1
+border-frr.00-00                        0x5       0x188e   1146     L1L2 OV
+- l1-frr:
+  * 10.1.3.1, via eth1, weight 1
+border-frr.00-00          129   0x00000005  0x188e    1147    0/0/1
+
+### border-frr: advertise-high-metrics + no attached-bit send
+- l1-srsim:
+0.0.0.0/0                                     Remote  ISIS      00h02m11s  15
+       10.1.1.1                                                     10
+No. of Routes: 1
+border-frr.00-00                        0x6       0xb233   1106     L1L2
+- l1-frr:
+  * 10.1.3.1, via eth1, weight 1
+border-frr.00-00          129   0x00000006  0xb233    1107    0/0/0
+  Extended Reachability: 0000.0009.0001.00 (Metric: 16777215)
+  Extended Reachability: 0000.0009.0003.00 (Metric: 16777215)
+  Extended IP Reachability: 10.2.0.0/30 (Metric: 16777215)
+  Extended IP Reachability: 10.2.1.0/30 (Metric: 16777215)
+
+### border-frr: restored (attached-bit send, no overload, no advertise-high-metrics)
+- l1-srsim:
+0.0.0.0/0                                     Remote  ISIS      00h00m38s  15
+       10.1.1.1                                                     10
+0.0.0.0/0                                     Remote  ISIS      00h00m38s  15
+       10.2.1.1                                                     10
+No. of Routes: 2
+border-frr.00-00                        0x7       0x1888   1159     L1L2 ATT
+- l1-frr:
+  * 10.1.3.1, via eth1, weight 1
+  * 10.2.3.1, via eth2, weight 1
+border-frr.00-00          129   0x00000007  0x1888    1159    1/0/0
