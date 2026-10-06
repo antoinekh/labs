@@ -1,0 +1,17 @@
+IS-IS level 1 link-state database:
+LSP ID                      Sequence Checksum Lifetime Attributes
+frr-border.00-00                 0xb   0x1836     1135 L1 L2 Attached
+frr-l1srsim.00-00                0x5   0xd6d8      872 L1
+frr-l1junos.00-00                0x4   0xe398      788 L1
+frr-l1frr.00-00                  0x3   0x8654      590 L1
+  4 LSPs
+
+IS-IS level 2 link-state database:
+  0 LSPs
+
+
+inet.0: 10 destinations, 10 routes (10 active, 0 holddown, 0 hidden)
++ = Active Route, - = Last Active, * = Both
+
+0.0.0.0/0          *[IS-IS/15] 00:00:41, metric 10
+                    >  to 10.2.2.1 via ge-0/0/0.0

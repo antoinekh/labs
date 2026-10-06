@@ -1,0 +1,40 @@
+### border srsim none
+- l1srsim: default route yes via 10.1.1.1 (LSP ATT=1 OL=0)
+- l1junos: default route yes via 10.1.2.1 (LSP ATT=1 OL=0)
+- l1frr: default route yes via 10.1.3.1 (LSP ATT=1 OL=0)
+### border srsim overload
+- l1srsim: default route no (LSP ATT=1 OL=1)
+- l1junos: default route yes via 10.1.2.1 (LSP ATT=1 OL=1)
+- l1frr: default route yes via 10.1.3.1 (LSP ATT=1 OL=1)
+### border srsim max-metric
+- l1srsim: default route no (LSP ATT=0 OL=0)
+- l1junos: default route no (LSP ATT=0 OL=0)
+- l1frr: default route no (LSP ATT=0 OL=0)
+### border srsim overload-suppress-att
+- l1srsim: default route no (LSP ATT=0 OL=1)
+- l1junos: default route no (LSP ATT=0 OL=1)
+- l1frr: default route no (LSP ATT=0 OL=1)
+### border frr none
+- l1srsim: default route yes via 10.2.1.1 (LSP ATT=1 OL=0)
+- l1junos: default route yes via 10.2.2.1 (LSP ATT=1 OL=0)
+- l1frr: default route yes via 10.2.3.1 (LSP ATT=1 OL=0)
+### border frr overload
+- l1srsim: default route no (LSP ATT=1 OL=1)
+- l1junos: default route yes via 10.2.2.1 (LSP ATT=1 OL=1)
+- l1frr: default route yes via 10.2.3.1 (LSP ATT=1 OL=1)
+### border frr max-metric
+- l1srsim: default route yes via 10.2.1.1 (LSP ATT=1 OL=0)
+- l1junos: default route no (LSP ATT=1 OL=0)
+- l1frr: default route yes via 10.2.3.1 (LSP ATT=1 OL=0)
+### border junos none
+- l1srsim: default route yes via 10.3.1.1 (LSP ATT=1 OL=0)
+- l1junos: default route yes via 10.3.2.1 (LSP ATT=1 OL=0)
+- l1frr: default route yes via 10.3.3.1 (LSP ATT=1 OL=0)
+### border junos overload
+- l1srsim: default route no (LSP ATT=0 OL=1)
+- l1junos: default route no (LSP ATT=0 OL=1)
+- l1frr: default route no (LSP ATT=0 OL=1)
+### border junos max-metric
+- l1srsim: default route no (LSP ATT=0 OL=0)
+- l1junos: default route no (LSP ATT=0 OL=0)
+- l1frr: default route no (LSP ATT=0 OL=0)

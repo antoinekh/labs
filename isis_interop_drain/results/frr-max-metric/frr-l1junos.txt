@@ -1,0 +1,11 @@
+IS-IS level 1 link-state database:
+LSP ID                      Sequence Checksum Lifetime Attributes
+frr-border.00-00                 0xa   0xabf3     1124 L1 L2 Attached
+frr-l1srsim.00-00                0x5   0xd6d8      926 L1
+frr-l1junos.00-00                0x4   0xe398      841 L1
+frr-l1frr.00-00                  0x3   0x8654      644 L1
+  4 LSPs
+
+IS-IS level 2 link-state database:
+  0 LSPs
+

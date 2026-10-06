@@ -1,0 +1,107 @@
+name: isis-interop-drain
+
+mgmt:
+  network: isis_interop_drain_mgmt
+  ipv4-subnet: 172.31.111.0/24
+
+topology:
+  kinds:
+    nokia_srsim:
+      image: nokia_srsim:26.3.R1
+      type: sr-1
+      license: license.txt
+    juniper_vjunosrouter:
+      image: vrnetlab/juniper_vjunos-router:23.4R2-S6.9
+
+  nodes:
+    l2core:
+      kind: linux
+      image: quay.io/frrouting/frr:10.2.5
+      mgmt-ipv4: 172.31.111.10
+      binds:
+        - configs/l2core/daemons:/etc/frr/daemons
+        - configs/l2core/frr.conf:/etc/frr/frr.conf
+      exec:
+        - ip route del default dev eth0
+    srsim-border:
+      kind: nokia_srsim
+      mgmt-ipv4: 172.31.111.11
+      startup-config: configs/srsim-border.partial.cfg
+    srsim-l1srsim:
+      kind: nokia_srsim
+      mgmt-ipv4: 172.31.111.12
+      startup-config: configs/srsim-l1srsim.partial.cfg
+    srsim-l1junos:
+      kind: juniper_vjunosrouter
+      mgmt-ipv4: 172.31.111.13
+      startup-config: configs/srsim-l1junos.conf
+    srsim-l1frr:
+      kind: linux
+      image: quay.io/frrouting/frr:10.2.5
+      mgmt-ipv4: 172.31.111.14
+      binds:
+        - configs/srsim-l1frr/daemons:/etc/frr/daemons
+        - configs/srsim-l1frr/frr.conf:/etc/frr/frr.conf
+      exec:
+        - ip route del default dev eth0
+    frr-border:
+      kind: linux
+      image: quay.io/frrouting/frr:10.2.5
+      mgmt-ipv4: 172.31.111.21
+      binds:
+        - configs/frr-border/daemons:/etc/frr/daemons
+        - configs/frr-border/frr.conf:/etc/frr/frr.conf
+      exec:
+        - ip route del default dev eth0
+    frr-l1srsim:
+      kind: nokia_srsim
+      mgmt-ipv4: 172.31.111.22
+      startup-config: configs/frr-l1srsim.partial.cfg
+    frr-l1junos:
+      kind: juniper_vjunosrouter
+      mgmt-ipv4: 172.31.111.23
+      startup-config: configs/frr-l1junos.conf
+    frr-l1frr:
+      kind: linux
+      image: quay.io/frrouting/frr:10.2.5
+      mgmt-ipv4: 172.31.111.24
+      binds:
+        - configs/frr-l1frr/daemons:/etc/frr/daemons
+        - configs/frr-l1frr/frr.conf:/etc/frr/frr.conf
+      exec:
+        - ip route del default dev eth0
+    junos-border:
+      kind: juniper_vjunosrouter
+      mgmt-ipv4: 172.31.111.31
+      startup-config: configs/junos-border.conf
+    junos-l1srsim:
+      kind: nokia_srsim
+      mgmt-ipv4: 172.31.111.32
+      startup-config: configs/junos-l1srsim.partial.cfg
+    junos-l1junos:
+      kind: juniper_vjunosrouter
+      mgmt-ipv4: 172.31.111.33
+      startup-config: configs/junos-l1junos.conf
+    junos-l1frr:
+      kind: linux
+      image: quay.io/frrouting/frr:10.2.5
+      mgmt-ipv4: 172.31.111.34
+      binds:
+        - configs/junos-l1frr/daemons:/etc/frr/daemons
+        - configs/junos-l1frr/frr.conf:/etc/frr/frr.conf
+      exec:
+        - ip route del default dev eth0
+
+  links:
+    - endpoints: ["l2core:eth1", "srsim-border:1/1/c1/1"]
+    - endpoints: ["srsim-border:1/1/c2/1", "srsim-l1srsim:1/1/c1/1"]
+    - endpoints: ["srsim-border:1/1/c3/1", "srsim-l1junos:ge-0/0/0"]
+    - endpoints: ["srsim-border:1/1/c4/1", "srsim-l1frr:eth1"]
+    - endpoints: ["l2core:eth2", "frr-border:eth1"]
+    - endpoints: ["frr-border:eth2", "frr-l1srsim:1/1/c1/1"]
+    - endpoints: ["frr-border:eth3", "frr-l1junos:ge-0/0/0"]
+    - endpoints: ["frr-border:eth4", "frr-l1frr:eth1"]
+    - endpoints: ["l2core:eth3", "junos-border:ge-0/0/0"]
+    - endpoints: ["junos-border:ge-0/0/1", "junos-l1srsim:1/1/c1/1"]
+    - endpoints: ["junos-border:ge-0/0/2", "junos-l1junos:ge-0/0/0"]
+    - endpoints: ["junos-border:ge-0/0/3", "junos-l1frr:eth1"]

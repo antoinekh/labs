@@ -1,0 +1,17 @@
+Area LAB:
+IS-IS Level-1 link-state database:
+LSP ID                  PduLen  SeqNumber   Chksum  Holdtime  ATT/P/OL
+border-srsim.00-00        187   0x0000000c  0x91d2     952    1/0/0
+border-frr.00-00          149   0x00000008  0x330d    1107    1/0/0
+border-junos.00-00        231   0x00000006  0xed1a     735    1/0/0
+l1-srsim.00-00            183   0x00000005  0xbd93     737    0/0/0
+l1-junos.00-00            227   0x00000005  0x47b0     737    0/0/0
+l1-frr.00-00         *    136   0x00000005  0xef69     700    0/0/0
+    6 LSPs
+
+Routing entry for 0.0.0.0/0
+  Known via "isis", distance 115, metric 10, best
+  Last update 00:04:09 ago
+  * 10.1.3.1, via eth1, weight 1
+  * 10.2.3.1, via eth2, weight 1
+  * 10.3.3.1, via eth3, weight 1

@@ -1,0 +1,40 @@
+### drained border-srsim: none
+- l1-srsim: default route via [frr, junos, srsim] (LSP of border-srsim: ATT=1 OL=0)
+- l1-junos: default route via [frr, junos, srsim] (LSP of border-srsim: ATT=1 OL=0)
+- l1-frr: default route via [frr, junos, srsim] (LSP of border-srsim: ATT=1 OL=0)
+### drained border-srsim: overload
+- l1-srsim: default route via [frr, junos] (LSP of border-srsim: ATT=1 OL=1)
+- l1-junos: default route via [frr, junos, srsim] (LSP of border-srsim: ATT=1 OL=1)
+- l1-frr: default route via [frr, junos, srsim] (LSP of border-srsim: ATT=1 OL=1)
+### drained border-srsim: max-metric
+- l1-srsim: default route via [frr, junos] (LSP of border-srsim: ATT=1 OL=0)
+- l1-junos: default route via [frr, junos] (LSP of border-srsim: ATT=0 OL=0)
+- l1-frr: default route via [frr, junos] (LSP of border-srsim: ATT=0 OL=0)
+### drained border-srsim: overload-suppress-att
+- l1-srsim: default route via [frr, junos] (LSP of border-srsim: ATT=1 OL=1)
+- l1-junos: default route via [frr, junos] (LSP of border-srsim: ATT=0 OL=1)
+- l1-frr: default route via [frr, junos] (LSP of border-srsim: ATT=0 OL=1)
+### drained border-frr: none
+- l1-srsim: default route via [frr, junos, srsim] (LSP of border-frr: ATT=1 OL=0)
+- l1-junos: default route via [frr, junos, srsim] (LSP of border-frr: ATT=1 OL=0)
+- l1-frr: default route via [frr, junos, srsim] (LSP of border-frr: ATT=1 OL=0)
+### drained border-frr: overload
+- l1-srsim: default route via [junos, srsim] (LSP of border-frr: ATT=1 OL=1)
+- l1-junos: default route via [frr, junos, srsim] (LSP of border-frr: ATT=1 OL=1)
+- l1-frr: default route via [frr, junos, srsim] (LSP of border-frr: ATT=1 OL=1)
+### drained border-frr: max-metric
+- l1-srsim: default route via [frr, junos, srsim] (LSP of border-frr: ATT=1 OL=0)
+- l1-junos: default route via [junos, srsim] (LSP of border-frr: ATT=1 OL=0)
+- l1-frr: default route via [frr, junos, srsim] (LSP of border-frr: ATT=1 OL=0)
+### drained border-junos: none
+- l1-srsim: default route via [frr, junos, srsim] (LSP of border-junos: ATT=1 OL=0)
+- l1-junos: default route via [frr, junos, srsim] (LSP of border-junos: ATT=1 OL=0)
+- l1-frr: default route via [frr, junos, srsim] (LSP of border-junos: ATT=1 OL=0)
+### drained border-junos: overload
+- l1-srsim: default route via [frr, srsim] (LSP of border-junos: ATT=0 OL=1)
+- l1-junos: default route via [frr, srsim] (LSP of border-junos: ATT=0 OL=1)
+- l1-frr: default route via [frr, srsim] (LSP of border-junos: ATT=0 OL=1)
+### drained border-junos: max-metric
+- l1-srsim: default route via [frr, srsim] (LSP of border-junos: ATT=0 OL=0)
+- l1-junos: default route via [frr, srsim] (LSP of border-junos: ATT=0 OL=0)
+- l1-frr: default route via [frr, srsim] (LSP of border-junos: ATT=0 OL=0)

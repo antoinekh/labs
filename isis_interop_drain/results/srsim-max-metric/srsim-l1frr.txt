@@ -1,0 +1,8 @@
+Area LAB:
+IS-IS Level-1 link-state database:
+LSP ID                  PduLen  SeqNumber   Chksum  Holdtime  ATT/P/OL
+srsim-border.00-00        187   0x0000000c  0xfba6    1161    0/0/0
+srsim-l1srsim.00-00       112   0x00000003  0x3d97     675    0/0/0
+srsim-l1junos.00-00       140   0x00000003  0x4d51     943    0/0/0
+srsim-l1frr.00-00    *    101   0x00000002  0x1fdd     634    0/0/0
+    4 LSPs

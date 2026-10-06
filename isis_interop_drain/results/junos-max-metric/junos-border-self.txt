@@ -1,0 +1,376 @@
+IS-IS level 1 link-state database:
+
+junos-border.00-00 Sequence: 0xa, Checksum: 0xb48a, Lifetime: 1161 secs
+   IS neighbor: junos-l1srsim.00              Metric: 16777214
+     Two-way fragment: junos-l1srsim.00-00, Two-way first fragment: junos-l1srsim.00-00
+   IS neighbor: junos-l1junos.00              Metric: 16777214
+     Two-way fragment: junos-l1junos.00-00, Two-way first fragment: junos-l1junos.00-00
+   IS neighbor: junos-l1frr.00                Metric: 16777214
+     Two-way fragment: junos-l1frr.00-00, Two-way first fragment: junos-l1frr.00-00
+   IP prefix: 10.3.1.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.3.2.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.3.3.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.255.3.1/32                   Metric:        0 Internal Up
+
+  Header: LSP ID: junos-border.00-00, Length: 231 bytes
+    Allocated length: 1492 bytes, Router ID: 10.255.3.1
+    Remaining lifetime: 1161 secs, Level: 1, Interface: 0
+    Estimated free bytes: 1085, Actual free bytes: 1261
+    Aging timer expires in: 1161 secs
+    Protocols: IP, IPv6
+
+  Packet: LSP ID: junos-border.00-00, Length: 231 bytes, Lifetime : 1198 secs
+    Checksum: 0xb48a, Sequence: 0xa, Attributes: 0x3 <L1 L2>
+    NLPID: 0x83, Fixed length: 27 bytes, Version: 1, Sysid length: 0 bytes
+    Packet type: 18, Packet version: 1, Max area: 0
+
+  TLVs:
+    Area address: 49.0013 (3)
+    LSP Buffer Size: 1492
+    Speaks: IP
+    Speaks: IPV6
+    IP router id: 10.255.3.1
+    IP address: 10.255.3.1
+    Hostname: junos-border
+    Router Capability:  Router ID 10.255.3.1, Flags: 0x00
+      Node MSD Advertisement Sub-TLV:Type:  23, Length: 4
+        Base MPLS Imposition MSD:Type:  1, Value: 0
+        Entropy Readable Label Depth MSD:Type:  2, Value: 16
+    Extended IS Reachability TLV, Type: 22, Length: 111
+    IS extended neighbor: junos-l1srsim.00, Metric: default 16777214 SubTLV len: 26
+      IP address: 10.3.1.1
+      Neighbor's IP address: 10.3.1.2
+      Local interface index: 334, Remote interface index: 2
+      Link MSD Advertisement Sub-TLV:Type: 15, Length: 2
+        Base MPLS Imposition MSD:Type: 1, Value: 0
+    IS extended neighbor: junos-l1junos.00, Metric: default 16777214 SubTLV len: 26
+      IP address: 10.3.2.1
+      Neighbor's IP address: 10.3.2.2
+      Local interface index: 335, Remote interface index: 333
+      Link MSD Advertisement Sub-TLV:Type: 15, Length: 2
+        Base MPLS Imposition MSD:Type: 1, Value: 0
+    IS extended neighbor: junos-l1frr.00, Metric: default 16777214 SubTLV len: 26
+      IP address: 10.3.3.1
+      Neighbor's IP address: 10.3.3.2
+      Local interface index: 336, Remote interface index: 1
+      Link MSD Advertisement Sub-TLV:Type: 15, Length: 2
+        Base MPLS Imposition MSD:Type: 1, Value: 0
+    IP extended prefix: 10.3.1.0/30 metric 10 up
+    IP extended prefix: 10.3.2.0/30 metric 10 up
+    IP extended prefix: 10.3.3.0/30 metric 10 up
+    IP extended prefix: 10.255.3.1/32 metric 0 up
+  No queued transmissions
+
+junos-l1srsim.00-00 Sequence: 0x4, Checksum: 0xccf1, Lifetime: 1198 secs
+   IS neighbor: junos-border.00               Metric:       10
+     Two-way fragment: junos-border.00-00, Two-way first fragment: junos-border.00-00
+   IP prefix: 10.3.1.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.255.3.2/32                   Metric:        0 Internal Up
+
+  Header: LSP ID: junos-l1srsim.00-00, Length: 112 bytes
+    Allocated length: 284 bytes, Router ID: 10.255.3.2
+    Remaining lifetime: 1198 secs, Level: 1, Interface: 334
+    Estimated free bytes: 197, Actual free bytes: 172
+    Aging timer expires in: 1198 secs
+    Protocols: IP
+
+  Packet: LSP ID: junos-l1srsim.00-00, Length: 112 bytes, Lifetime : 1198 secs
+    Checksum: 0xccf1, Sequence: 0x4, Attributes: 0x1 <L1>
+    NLPID: 0x83, Fixed length: 27 bytes, Version: 1, Sysid length: 0 bytes
+    Packet type: 18, Packet version: 1, Max area: 3
+
+  TLVs:
+    Area address: 49.0013 (3)
+    Speaks: IP
+    Hostname: junos-l1srsim
+    IP router id: 10.255.3.2
+    IP address: 10.3.1.2
+    IP address: 10.255.3.2
+    Extended IS Reachability TLV, Type: 22, Length: 23
+    IS extended neighbor: junos-border.00, Metric: default 10 SubTLV len: 12
+      IP address: 10.3.1.2
+      Neighbor's IP address: 10.3.1.1
+    IP extended prefix: 10.3.1.0/30 metric 10 up
+    IP extended prefix: 10.255.3.2/32 metric 0 up
+
+  2 Queued transmissions:
+  Send PSN on ge-0/0/1.0 for 00:00:00
+  Retransmit on ge-0/0/2.0 for 00:00:00
+
+junos-l1junos.00-00 Sequence: 0x3, Checksum: 0x3409, Lifetime: 585 secs
+   IS neighbor: junos-border.00               Metric:       10
+     Two-way fragment: junos-border.00-00, Two-way first fragment: junos-border.00-00
+   IP prefix: 10.3.2.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.255.3.3/32                   Metric:        0 Internal Up
+
+  Header: LSP ID: junos-l1junos.00-00, Length: 140 bytes
+    Allocated length: 284 bytes, Router ID: 10.255.3.3
+    Remaining lifetime: 585 secs, Level: 1, Interface: 335
+    Estimated free bytes: 144, Actual free bytes: 144
+    Aging timer expires in: 585 secs
+    Protocols: IP, IPv6
+
+  Packet: LSP ID: junos-l1junos.00-00, Length: 140 bytes, Lifetime : 1196 secs
+    Checksum: 0x3409, Sequence: 0x3, Attributes: 0x1 <L1>
+    NLPID: 0x83, Fixed length: 27 bytes, Version: 1, Sysid length: 0 bytes
+    Packet type: 18, Packet version: 1, Max area: 0
+
+  TLVs:
+    Area address: 49.0013 (3)
+    LSP Buffer Size: 1492
+    Speaks: IP
+    Speaks: IPV6
+    IP router id: 10.255.3.3
+    IP address: 10.255.3.3
+    Hostname: junos-l1junos
+    IP extended prefix: 10.255.3.3/32 metric 0 up
+    IP extended prefix: 10.3.2.0/30 metric 10 up
+    Router Capability:  Router ID 10.255.3.3, Flags: 0x00
+      Node MSD Advertisement Sub-TLV:Type:  23, Length: 4
+        Base MPLS Imposition MSD:Type:  1, Value: 0
+        Entropy Readable Label Depth MSD:Type:  2, Value: 16
+    Extended IS Reachability TLV, Type: 22, Length: 37
+    IS extended neighbor: junos-border.00, Metric: default 10 SubTLV len: 26
+      IP address: 10.3.2.2
+      Neighbor's IP address: 10.3.2.1
+      Local interface index: 333, Remote interface index: 335
+      Link MSD Advertisement Sub-TLV:Type: 15, Length: 2
+        Base MPLS Imposition MSD:Type: 1, Value: 0
+  No queued transmissions
+
+junos-l1frr.00-00 Sequence: 0x4, Checksum: 0x9f4a, Lifetime: 519 secs
+   IS neighbor: junos-border.00               Metric:       10
+     Two-way fragment: junos-border.00-00, Two-way first fragment: junos-border.00-00
+   IP prefix: 10.3.3.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.255.3.4/32                   Metric:       10 Internal Up
+
+  Header: LSP ID: junos-l1frr.00-00, Length: 101 bytes
+    Allocated length: 284 bytes, Router ID: 10.255.3.4
+    Remaining lifetime: 519 secs, Level: 1, Interface: 336
+    Estimated free bytes: 257, Actual free bytes: 183
+    Aging timer expires in: 519 secs
+    Protocols: IP
+
+  Packet: LSP ID: junos-l1frr.00-00, Length: 101 bytes, Lifetime : 1120 secs
+    Checksum: 0x9f4a, Sequence: 0x4, Attributes: 0x1 <L1>
+    NLPID: 0x83, Fixed length: 27 bytes, Version: 1, Sysid length: 0 bytes
+    Packet type: 18, Packet version: 1, Max area: 0
+
+  TLVs:
+    Speaks: IP
+    Area address: 49.0013 (3)
+    Hostname: junos-l1frr
+    Router Capability:  Router ID 10.255.3.4, Flags: 0x00
+    IP router id: 10.255.3.4
+    Extended IS Reachability TLV, Type: 22, Length: 11
+    IS extended neighbor: junos-border.00, Metric: default 10 SubTLV len: 0
+    IP address: 10.255.3.4
+    IP extended prefix: 10.255.3.4/32 metric 10 up
+    IP extended prefix: 10.3.3.0/30 metric 10 up
+  No queued transmissions
+
+IS-IS level 2 link-state database:
+
+l2core.00-00 Sequence: 0x4, Checksum: 0x492c, Lifetime: 532 secs
+   IS neighbor: srsim-border.00               Metric:       10
+     Two-way fragment: srsim-border.00-00, Two-way first fragment: srsim-border.00-00
+   IS neighbor: frr-border.00                 Metric:       10
+     Two-way fragment: frr-border.00-00, Two-way first fragment: frr-border.00-00
+   IS neighbor: junos-border.00               Metric:       10
+     Two-way fragment: junos-border.00-00, Two-way first fragment: junos-border.00-00
+   IP prefix: 10.1.0.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.2.0.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.3.0.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.255.0.1/32                   Metric:       10 Internal Up
+
+  Header: LSP ID: l2core.00-00, Length: 136 bytes
+    Allocated length: 284 bytes, Router ID: 10.255.0.1
+    Remaining lifetime: 532 secs, Level: 2, Interface: 333
+    Estimated free bytes: 257, Actual free bytes: 148
+    Aging timer expires in: 532 secs
+    Protocols: IP
+
+  Packet: LSP ID: l2core.00-00, Length: 136 bytes, Lifetime : 1158 secs
+    Checksum: 0x492c, Sequence: 0x4, Attributes: 0x3 <L1 L2>
+    NLPID: 0x83, Fixed length: 27 bytes, Version: 1, Sysid length: 0 bytes
+    Packet type: 20, Packet version: 1, Max area: 0
+
+  TLVs:
+    Speaks: IP
+    Area address: 49.0100 (3)
+    Hostname: l2core
+    Router Capability:  Router ID 10.255.0.1, Flags: 0x00
+    IP router id: 10.255.0.1
+    Extended IS Reachability TLV, Type: 22, Length: 33
+    IS extended neighbor: srsim-border.00, Metric: default 10 SubTLV len: 0
+    IS extended neighbor: frr-border.00, Metric: default 10 SubTLV len: 0
+    IS extended neighbor: junos-border.00, Metric: default 10 SubTLV len: 0
+    IP address: 10.255.0.1
+    IP extended prefix: 10.1.0.0/30 metric 10 up
+    IP extended prefix: 10.255.0.1/32 metric 10 up
+    IP extended prefix: 10.2.0.0/30 metric 10 up
+    IP extended prefix: 10.3.0.0/30 metric 10 up
+  No queued transmissions
+
+srsim-border.00-00 Sequence: 0x14, Checksum: 0x1878, Lifetime: 854 secs
+   IS neighbor: l2core.00                     Metric:       10
+     Two-way fragment: l2core.00-00, Two-way first fragment: l2core.00-00
+   IP prefix: 10.1.0.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.1.1.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.1.2.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.1.3.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.255.1.1/32                   Metric:        0 Internal Up
+   IP prefix: 10.255.1.2/32                   Metric:       10 Internal Up
+   IP prefix: 10.255.1.3/32                   Metric:       10 Internal Up
+   IP prefix: 10.255.1.4/32                   Metric:       20 Internal Up
+
+  Header: LSP ID: srsim-border.00-00, Length: 165 bytes
+    Allocated length: 284 bytes, Router ID: 10.255.1.1
+    Remaining lifetime: 854 secs, Level: 2, Interface: 333
+    Estimated free bytes: 119, Actual free bytes: 119
+    Aging timer expires in: 854 secs
+    Protocols: IP
+
+  Packet: LSP ID: srsim-border.00-00, Length: 165 bytes, Lifetime : 1200 secs
+    Checksum: 0x1878, Sequence: 0x14, Attributes: 0x3 <L1 L2>
+    NLPID: 0x83, Fixed length: 27 bytes, Version: 1, Sysid length: 0 bytes
+    Packet type: 20, Packet version: 1, Max area: 3
+
+  TLVs:
+    Area address: 49.0011 (3)
+    Speaks: IP
+    Hostname: srsim-border
+    IP router id: 10.255.1.1
+    IP address: 10.255.1.1
+    IP address: 10.1.0.2
+    Extended IS Reachability TLV, Type: 22, Length: 23
+    IS extended neighbor: l2core.00, Metric: default 10 SubTLV len: 12
+      IP address: 10.1.0.2
+      Neighbor's IP address: 10.1.0.1
+    IP extended prefix: 10.1.0.0/30 metric 10 up
+    IP extended prefix: 10.1.1.0/30 metric 10 up
+    IP extended prefix: 10.1.2.0/30 metric 10 up
+    IP extended prefix: 10.1.3.0/30 metric 10 up
+    IP extended prefix: 10.255.1.1/32 metric 0 up
+    IP extended prefix: 10.255.1.2/32 metric 10 up
+    IP extended prefix: 10.255.1.3/32 metric 10 up
+    IP extended prefix: 10.255.1.4/32 metric 20 up
+  No queued transmissions
+
+frr-border.00-00 Sequence: 0x9, Checksum: 0x444c, Lifetime: 992 secs
+   IS neighbor: l2core.00                     Metric:       10
+     Two-way fragment: l2core.00-00, Two-way first fragment: l2core.00-00
+   IP prefix: 10.2.0.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.2.1.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.2.2.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.2.3.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.255.2.1/32                   Metric:       10 Internal Up
+
+  Header: LSP ID: frr-border.00-00, Length: 127 bytes
+    Allocated length: 284 bytes, Router ID: 10.255.2.1
+    Remaining lifetime: 992 secs, Level: 2, Interface: 333
+    Estimated free bytes: 157, Actual free bytes: 157
+    Aging timer expires in: 992 secs
+    Protocols: IP
+
+  Packet: LSP ID: frr-border.00-00, Length: 127 bytes, Lifetime : 1156 secs
+    Checksum: 0x444c, Sequence: 0x9, Attributes: 0x3 <L1 L2>
+    NLPID: 0x83, Fixed length: 27 bytes, Version: 1, Sysid length: 0 bytes
+    Packet type: 20, Packet version: 1, Max area: 0
+
+  TLVs:
+    Speaks: IP
+    Area address: 49.0012 (3)
+    Hostname: frr-border
+    Router Capability:  Router ID 10.255.2.1, Flags: 0x00
+    IP router id: 10.255.2.1
+    Extended IS Reachability TLV, Type: 22, Length: 11
+    IS extended neighbor: l2core.00, Metric: default 10 SubTLV len: 0
+    IP address: 10.255.2.1
+    IP extended prefix: 10.2.0.0/30 metric 10 up
+    IP extended prefix: 10.2.1.0/30 metric 10 up
+    IP extended prefix: 10.2.2.0/30 metric 10 up
+    IP extended prefix: 10.255.2.1/32 metric 10 up
+    IP extended prefix: 10.2.3.0/30 metric 10 up
+  No queued transmissions
+
+junos-border.00-00 Sequence: 0xa, Checksum: 0x63ca, Lifetime: 1161 secs
+   IS neighbor: l2core.00                     Metric: 16777214
+     Two-way fragment: l2core.00-00, Two-way first fragment: l2core.00-00
+   IP prefix: 10.3.0.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.3.1.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.3.2.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.3.3.0/30                     Metric:       10 Internal Up
+   IP prefix: 10.255.3.1/32                   Metric:        0 Internal Up
+
+  Header: LSP ID: junos-border.00-00, Length: 166 bytes
+    Allocated length: 1492 bytes, Router ID: 10.255.3.1
+    Remaining lifetime: 1161 secs, Level: 2, Interface: 0
+    Estimated free bytes: 1222, Actual free bytes: 1326
+    Aging timer expires in: 1161 secs
+    Protocols: IP, IPv6
+
+  Packet: LSP ID: junos-border.00-00, Length: 166 bytes, Lifetime : 1198 secs
+    Checksum: 0x63ca, Sequence: 0xa, Attributes: 0x3 <L1 L2>
+    NLPID: 0x83, Fixed length: 27 bytes, Version: 1, Sysid length: 0 bytes
+    Packet type: 20, Packet version: 1, Max area: 0
+
+  TLVs:
+    Area address: 49.0013 (3)
+    LSP Buffer Size: 1492
+    Speaks: IP
+    Speaks: IPV6
+    IP router id: 10.255.3.1
+    IP address: 10.255.3.1
+    Hostname: junos-border
+    IP extended prefix: 10.3.0.0/30 metric 10 up
+    IP extended prefix: 10.3.1.0/30 metric 10 up
+    IP extended prefix: 10.3.2.0/30 metric 10 up
+    IP extended prefix: 10.3.3.0/30 metric 10 up
+    IP extended prefix: 10.255.3.1/32 metric 0 up
+    Router Capability:  Router ID 10.255.3.1, Flags: 0x00
+      Node MSD Advertisement Sub-TLV:Type:  23, Length: 4
+        Base MPLS Imposition MSD:Type:  1, Value: 0
+        Entropy Readable Label Depth MSD:Type:  2, Value: 16
+    Extended IS Reachability TLV, Type: 22, Length: 37
+    IS extended neighbor: l2core.00, Metric: default 16777214 SubTLV len: 26
+      IP address: 10.3.0.2
+      Neighbor's IP address: 10.3.0.1
+      Local interface index: 333, Remote interface index: 3
+      Link MSD Advertisement Sub-TLV:Type: 15, Length: 2
+        Base MPLS Imposition MSD:Type: 1, Value: 0
+  No queued transmissions
+
+Instance: master
+  Router ID: 10.255.3.1
+  Hostname: junos-border
+  Sysid: 0000.0003.0001
+  Areaid: 49.0013
+  Adjacency holddown: enabled
+  Maximum Areas: 3
+  LSP life time: 1200
+  Attached bit evaluation: enabled
+  SPF delay: 200 msec, SPF holddown: 5000 msec, SPF rapid runs: 3
+  Overload bit at startup is set
+    Overload high metrics: enabled
+    Allow route leaking: disabled
+    Allow internal prefix overloading: disabled
+    Allow external prefix overloading: disabled
+  IPv4 is enabled, IPv6 is enabled
+  Traffic engineering: enabled
+  Traffic engineering v6: disabled
+  Restart: Disabled
+    Helper mode: Enabled
+  Layer2-map: Disabled
+  Source Packet Routing (SPRING): Disabled
+  Post Convergence Backup: Disabled
+  Level 1
+    Internal route preference: 15
+    External route preference: 160
+    Prefix export count: 0
+    Wide metrics are enabled
+  Level 2
+    Internal route preference: 18
+    External route preference: 165
+    Prefix export count: 0
+    Wide metrics are enabled

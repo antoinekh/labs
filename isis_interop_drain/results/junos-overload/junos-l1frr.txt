@@ -1,0 +1,8 @@
+Area LAB:
+IS-IS Level-1 link-state database:
+LSP ID                  PduLen  SeqNumber   Chksum  Holdtime  ATT/P/OL
+junos-border.00-00        231   0x00000007  0x130a    1157    0/0/1
+junos-l1srsim.00-00       112   0x00000003  0xcef0     632    0/0/0
+junos-l1junos.00-00       140   0x00000003  0x3409     634    0/0/0
+junos-l1frr.00-00    *    101   0x00000004  0x9f4a     570    0/0/0
+    4 LSPs

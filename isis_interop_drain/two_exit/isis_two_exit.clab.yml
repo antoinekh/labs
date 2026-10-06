@@ -1,0 +1,73 @@
+name: isis-two-exit
+
+mgmt:
+  network: isis_two_exit_mgmt
+  ipv4-subnet: 172.31.112.0/24
+
+topology:
+  kinds:
+    nokia_srsim:
+      image: nokia_srsim:26.3.R1
+      type: sr-1
+      license: ../license.txt
+    juniper_vjunosrouter:
+      image: vrnetlab/juniper_vjunos-router:23.4R2-S6.9
+
+  nodes:
+    l2core:
+      kind: linux
+      image: quay.io/frrouting/frr:10.2.5
+      mgmt-ipv4: 172.31.112.10
+      binds:
+        - configs/l2core/daemons:/etc/frr/daemons
+        - configs/l2core/frr.conf:/etc/frr/frr.conf
+      exec:
+        - ip route del default dev eth0
+    border-srsim:
+      kind: nokia_srsim
+      mgmt-ipv4: 172.31.112.11
+      startup-config: configs/border-srsim.partial.cfg
+    border-frr:
+      kind: linux
+      image: quay.io/frrouting/frr:10.2.5
+      mgmt-ipv4: 172.31.112.12
+      binds:
+        - configs/border-frr/daemons:/etc/frr/daemons
+        - configs/border-frr/frr.conf:/etc/frr/frr.conf
+      exec:
+        - ip route del default dev eth0
+    border-junos:
+      kind: juniper_vjunosrouter
+      mgmt-ipv4: 172.31.112.13
+      startup-config: configs/border-junos.conf
+    l1-srsim:
+      kind: nokia_srsim
+      mgmt-ipv4: 172.31.112.21
+      startup-config: configs/l1-srsim.partial.cfg
+    l1-junos:
+      kind: juniper_vjunosrouter
+      mgmt-ipv4: 172.31.112.22
+      startup-config: configs/l1-junos.conf
+    l1-frr:
+      kind: linux
+      image: quay.io/frrouting/frr:10.2.5
+      mgmt-ipv4: 172.31.112.23
+      binds:
+        - configs/l1-frr/daemons:/etc/frr/daemons
+        - configs/l1-frr/frr.conf:/etc/frr/frr.conf
+      exec:
+        - ip route del default dev eth0
+
+  links:
+    - endpoints: ["l2core:eth1", "border-srsim:1/1/c1/1"]
+    - endpoints: ["l2core:eth2", "border-frr:eth1"]
+    - endpoints: ["l2core:eth3", "border-junos:ge-0/0/0"]
+    - endpoints: ["border-srsim:1/1/c2/1", "l1-srsim:1/1/c1/1"]
+    - endpoints: ["border-frr:eth2", "l1-srsim:1/1/c2/1"]
+    - endpoints: ["border-junos:ge-0/0/1", "l1-srsim:1/1/c3/1"]
+    - endpoints: ["border-srsim:1/1/c3/1", "l1-junos:ge-0/0/0"]
+    - endpoints: ["border-frr:eth3", "l1-junos:ge-0/0/1"]
+    - endpoints: ["border-junos:ge-0/0/2", "l1-junos:ge-0/0/2"]
+    - endpoints: ["border-srsim:1/1/c4/1", "l1-frr:eth1"]
+    - endpoints: ["border-frr:eth4", "l1-frr:eth2"]
+    - endpoints: ["border-junos:ge-0/0/3", "l1-frr:eth3"]

@@ -1,0 +1,17 @@
+IS-IS level 1 link-state database:
+LSP ID                      Sequence Checksum Lifetime Attributes
+junos-border.00-00               0x6   0xf227      683 L1 L2 Attached
+junos-l1srsim.00-00              0x3   0xcef0      679 L1
+junos-l1junos.00-00              0x3   0x3409      685 L1
+junos-l1frr.00-00                0x4   0x9f4a      615 L1
+  4 LSPs
+
+IS-IS level 2 link-state database:
+  0 LSPs
+
+
+inet.0: 9 destinations, 9 routes (9 active, 0 holddown, 0 hidden)
++ = Active Route, - = Last Active, * = Both
+
+0.0.0.0/0          *[IS-IS/15] 00:08:34, metric 10
+                    >  to 10.3.2.1 via ge-0/0/0.0

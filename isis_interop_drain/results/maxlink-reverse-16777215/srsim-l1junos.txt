@@ -1,0 +1,20 @@
+IS-IS level 1 link-state database:
+LSP ID                      Sequence Checksum Lifetime Attributes
+srsim-border.00-00              0x13   0xb9f4     1158 L1 L2 Attached
+srsim-l1srsim.00-00              0xd   0x29a1     1096 L1
+srsim-l1junos.00-00              0xb    0x195     1100 L1
+srsim-l1frr.00-00                0x8   0x13e3     1041 L1
+  4 LSPs
+
+IS-IS level 2 link-state database:
+  0 LSPs
+
+
+
+inet.0: 3 destinations, 3 routes (3 active, 0 holddown, 0 hidden)
+
+mgmt_junos.inet.0: 3 destinations, 3 routes (3 active, 0 holddown, 0 hidden)
+
+iso.0: 1 destinations, 1 routes (1 active, 0 holddown, 0 hidden)
+
+mgmt_junos.inet6.0: 4 destinations, 4 routes (4 active, 0 holddown, 0 hidden)

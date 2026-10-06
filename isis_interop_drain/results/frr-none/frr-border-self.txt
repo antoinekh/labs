@@ -1,0 +1,177 @@
+Area LAB:
+IS-IS Level-1 link-state database:
+LSP ID                  PduLen  SeqNumber   Chksum  Holdtime  ATT/P/OL
+frr-border.00-00     *    149   0x0000000b  0x1836    1135    1/0/0
+  Protocols Supported: IPv4
+  Area Address: 49.0012
+  Hostname: frr-border
+  TE Router ID: 10.255.2.1
+  Router Capability: 10.255.2.1 , D:0, S:0
+  Extended Reachability: 0000.0002.0002.00 (Metric: 10)
+  Extended Reachability: 0000.0002.0003.00 (Metric: 10)
+  Extended Reachability: 0000.0002.0004.00 (Metric: 10)
+  IPv4 Interface Address: 10.255.2.1
+  Extended IP Reachability: 10.2.0.0/30 (Metric: 10)
+  Extended IP Reachability: 10.2.1.0/30 (Metric: 10)
+  Extended IP Reachability: 10.2.2.0/30 (Metric: 10)
+  Extended IP Reachability: 10.255.2.1/32 (Metric: 10)
+  Extended IP Reachability: 10.2.3.0/30 (Metric: 10)
+
+frr-l1srsim.00-00         110   0x00000005  0xd6d8     873    0/0/0
+  Protocols Supported: IPv4
+  Area Address: 49.0012
+  Hostname: frr-l1srsim
+  TE Router ID: 10.255.2.2
+  Extended Reachability: 0000.0002.0001.00 (Metric: 10)
+    Local Interface IP Address(es): 10.2.1.2
+    Remote Interface IP Address(es): 10.2.1.1
+  IPv4 Interface Address: 10.2.1.2
+  IPv4 Interface Address: 10.255.2.2
+  Extended IP Reachability: 10.2.1.0/30 (Metric: 10)
+  Extended IP Reachability: 10.255.2.2/32 (Metric: 0)
+
+frr-l1junos.00-00         138   0x00000004  0xe398     786    0/0/0
+  Protocols Supported: IPv4, IPv6
+  Area Address: 49.0012
+  Hostname: frr-l1junos
+  TE Router ID: 10.255.2.3
+  Router Capability: 10.255.2.3 , D:0, S:0
+  Extended Reachability: 0000.0002.0001.00 (Metric: 10)
+    Link Local  ID: 333
+    Link Remote ID: 2
+    Local Interface IP Address(es): 10.2.2.2
+    Remote Interface IP Address(es): 10.2.2.1
+  IPv4 Interface Address: 10.255.2.3
+  Extended IP Reachability: 10.255.2.3/32 (Metric: 0)
+  Extended IP Reachability: 10.2.2.0/30 (Metric: 10)
+
+frr-l1frr.00-00            99   0x00000003  0x8654     591    0/0/0
+  Protocols Supported: IPv4
+  Area Address: 49.0012
+  Hostname: frr-l1frr
+  TE Router ID: 10.255.2.4
+  Router Capability: 10.255.2.4 , D:0, S:0
+  Extended Reachability: 0000.0002.0001.00 (Metric: 10)
+  IPv4 Interface Address: 10.255.2.4
+  Extended IP Reachability: 10.255.2.4/32 (Metric: 10)
+  Extended IP Reachability: 10.2.3.0/30 (Metric: 10)
+
+    4 LSPs
+
+IS-IS Level-2 link-state database:
+LSP ID                  PduLen  SeqNumber   Chksum  Holdtime  ATT/P/OL
+l2core.00-00              136   0x00000005  0x472d     904    0/0/0
+  Protocols Supported: IPv4
+  Area Address: 49.0100
+  Hostname: l2core
+  TE Router ID: 10.255.0.1
+  Router Capability: 10.255.0.1 , D:0, S:0
+  Extended Reachability: 0000.0001.0001.00 (Metric: 10)
+  Extended Reachability: 0000.0002.0001.00 (Metric: 10)
+  Extended Reachability: 0000.0003.0001.00 (Metric: 10)
+  IPv4 Interface Address: 10.255.0.1
+  Extended IP Reachability: 10.1.0.0/30 (Metric: 10)
+  Extended IP Reachability: 10.255.0.1/32 (Metric: 10)
+  Extended IP Reachability: 10.2.0.0/30 (Metric: 10)
+  Extended IP Reachability: 10.3.0.0/30 (Metric: 10)
+
+srsim-border.00-00        165   0x00000015  0x1679     889    0/0/0
+  Protocols Supported: IPv4
+  Area Address: 49.0011
+  Hostname: srsim-border
+  TE Router ID: 10.255.1.1
+  Extended Reachability: 0000.0000.0001.00 (Metric: 10)
+    Local Interface IP Address(es): 10.1.0.2
+    Remote Interface IP Address(es): 10.1.0.1
+  IPv4 Interface Address: 10.255.1.1
+  IPv4 Interface Address: 10.1.0.2
+  Extended IP Reachability: 10.1.0.0/30 (Metric: 10)
+  Extended IP Reachability: 10.1.1.0/30 (Metric: 10)
+  Extended IP Reachability: 10.1.2.0/30 (Metric: 10)
+  Extended IP Reachability: 10.1.3.0/30 (Metric: 10)
+  Extended IP Reachability: 10.255.1.1/32 (Metric: 0)
+  Extended IP Reachability: 10.255.1.2/32 (Metric: 10)
+  Extended IP Reachability: 10.255.1.3/32 (Metric: 10)
+  Extended IP Reachability: 10.255.1.4/32 (Metric: 20)
+
+frr-border.00-00     *    127   0x0000000b  0x404e    1144    0/0/0
+  Protocols Supported: IPv4
+  Area Address: 49.0012
+  Hostname: frr-border
+  TE Router ID: 10.255.2.1
+  Router Capability: 10.255.2.1 , D:0, S:0
+  Extended Reachability: 0000.0000.0001.00 (Metric: 10)
+  IPv4 Interface Address: 10.255.2.1
+  Extended IP Reachability: 10.2.0.0/30 (Metric: 10)
+  Extended IP Reachability: 10.2.1.0/30 (Metric: 10)
+  Extended IP Reachability: 10.2.2.0/30 (Metric: 10)
+  Extended IP Reachability: 10.255.2.1/32 (Metric: 10)
+  Extended IP Reachability: 10.2.3.0/30 (Metric: 10)
+
+junos-border.00-00        193   0x0000000c  0x83c9     677    0/0/0
+  Protocols Supported: IPv4, IPv6
+  Area Address: 49.0013
+  Hostname: junos-border
+  TE Router ID: 10.255.3.1
+  Router Capability: 10.255.3.1 , D:0, S:0
+  Extended Reachability: 0000.0000.0001.00 (Metric: 10)
+    Link Local  ID: 333
+    Link Remote ID: 3
+    Local Interface IP Address(es): 10.3.0.2
+    Remote Interface IP Address(es): 10.3.0.1
+  IPv4 Interface Address: 10.255.3.1
+  Extended IP Reachability: 10.3.0.0/30 (Metric: 10)
+  Extended IP Reachability: 10.3.1.0/30 (Metric: 10)
+  Extended IP Reachability: 10.3.2.0/30 (Metric: 10)
+  Extended IP Reachability: 10.3.3.0/30 (Metric: 10)
+  Extended IP Reachability: 10.255.3.1/32 (Metric: 0)
+  Extended IP Reachability: 10.255.3.2/32 (Metric: 10)
+  Extended IP Reachability: 10.255.3.3/32 (Metric: 10)
+  Extended IP Reachability: 10.255.3.4/32 (Metric: 20)
+
+    4 LSPs
+
+vrf             : default
+Process Id      : 28
+System Id       : 0000.0002.0001
+Up time         : 00:24:35 ago
+Number of areas : 1
+Area LAB:
+  Net: 49.0012.0000.0002.0001.00
+  TX counters per PDU type:
+    P2P IIH: 2079
+     L1 LSP: 44
+     L2 LSP: 11
+    L1 CSNP: 457
+    L2 CSNP: 164
+    L1 PSNP: 9
+    L2 PSNP: 33
+   LSP RXMT: 0
+  RX counters per PDU type:
+    P2P IIH: 1353
+     L1 LSP: 9
+     L2 LSP: 34
+    L1 CSNP: 566
+    L2 CSNP: 164
+    L1 PSNP: 41
+    L2 PSNP: 11
+  Drop counters per PDU type:
+  Advertise high metrics: Disabled
+  Level-1:
+    LSP0 regenerated: 11
+         LSPs purged: 0
+    SPF:
+      minimum interval  : 1
+    IPv4 route computation:
+      last run elapsed  : 00:00:41 ago
+      last run duration : 554 usec
+      run count         : 18
+  Level-2:
+    LSP0 regenerated: 11
+         LSPs purged: 0
+    SPF:
+      minimum interval  : 1
+    IPv4 route computation:
+      last run elapsed  : 00:00:41 ago
+      last run duration : 308 usec
+      run count         : 45

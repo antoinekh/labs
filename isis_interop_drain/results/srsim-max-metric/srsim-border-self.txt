@@ -1,0 +1,536 @@
+
+
+
+[/]
+
+[/]
+
+===============================================================================
+Rtr Base ISIS Instance 0 Database (detail)
+===============================================================================
+
+Displaying Level 1 database
+-------------------------------------------------------------------------------
+LSP ID    : srsim-border.00-00                          Level     : L1 
+Sequence  : 0xc                    Checksum  : 0xfba6   Lifetime  : 1162
+Version   : 1                      Pkt Type  : 18       Pkt Ver   : 1
+Attributes: L1L2                   Max Area  : 3        Alloc Len : 1492
+SYS ID    : 0000.0001.0001         SysID Len : 6        Used Len  : 187
+ 
+TLVs : 
+  Area Addresses:
+    Area Address : (3) 49.0011
+  Supp Protocols:
+    Protocols     : IPv4
+  IS-Hostname   : srsim-border
+  Router ID   :
+    Router ID   : 10.255.1.1
+  I/F Addresses :
+    I/F Address   : 10.1.1.1
+    I/F Address   : 10.255.1.1
+    I/F Address   : 10.1.2.1
+    I/F Address   : 10.1.3.1
+  TE IS Nbrs   :
+    Nbr   : srsim-l1frr.00                      
+    Default Metric  : 16777214
+    Sub TLV Len     : 12
+    IF Addr   : 10.1.3.1
+    Nbr IP    : 10.1.3.2
+  TE IS Nbrs   :
+    Nbr   : srsim-l1srsim.00                    
+    Default Metric  : 16777214
+    Sub TLV Len     : 12
+    IF Addr   : 10.1.1.1
+    Nbr IP    : 10.1.1.2
+  TE IS Nbrs   :
+    Nbr   : srsim-l1junos.00                    
+    Default Metric  : 16777214
+    Sub TLV Len     : 12
+    IF Addr   : 10.1.2.1
+    Nbr IP    : 10.1.2.2
+  TE IP Reach   :
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.1.1.0
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.1.2.0
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.1.3.0
+    Default Metric  : 0
+    Control Info:    , prefLen 32
+    Prefix   : 10.255.1.1
+
+-------------------------------------------------------------------------------
+LSP ID    : srsim-l1srsim.00-00                         Level     : L1 
+Sequence  : 0x3                    Checksum  : 0x3d97   Lifetime  : 675
+Version   : 1                      Pkt Type  : 18       Pkt Ver   : 1
+Attributes: L1                     Max Area  : 3        Alloc Len : 112
+SYS ID    : 0000.0001.0002         SysID Len : 6        Used Len  : 112
+ 
+TLVs : 
+  Area Addresses:
+    Area Address : (3) 49.0011
+  Supp Protocols:
+    Protocols     : IPv4
+  IS-Hostname   : srsim-l1srsim
+  Router ID   :
+    Router ID   : 10.255.1.2
+  I/F Addresses :
+    I/F Address   : 10.1.1.2
+    I/F Address   : 10.255.1.2
+  TE IS Nbrs   :
+    Nbr   : srsim-border.00                     
+    Default Metric  : 10
+    Sub TLV Len     : 12
+    IF Addr   : 10.1.1.2
+    Nbr IP    : 10.1.1.1
+  TE IP Reach   :
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.1.1.0
+    Default Metric  : 0
+    Control Info:    , prefLen 32
+    Prefix   : 10.255.1.2
+
+-------------------------------------------------------------------------------
+LSP ID    : srsim-l1junos.00-00                         Level     : L1 
+Sequence  : 0x3                    Checksum  : 0x4d51   Lifetime  : 943
+Version   : 1                      Pkt Type  : 18       Pkt Ver   : 1
+Attributes: L1                     Max Area  : 0        Alloc Len : 140
+SYS ID    : 0000.0001.0003         SysID Len : 6        Used Len  : 140
+ 
+TLVs : 
+  Area Addresses:
+    Area Address : (3) 49.0011
+  Unknown TLV   : 14 Len 2    :
+    05 D4 
+  Supp Protocols:
+    Protocols     : IPv4
+    Protocols     : IPv6
+  Router ID   :
+    Router ID   : 10.255.1.3
+  I/F Addresses :
+    I/F Address   : 10.255.1.3
+  IS-Hostname   : srsim-l1junos
+  TE IP Reach   :
+    Default Metric  : 0
+    Control Info:    , prefLen 32
+    Prefix   : 10.255.1.3
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.1.2.0
+  Router Cap : 10.255.1.3, D:0, S:0
+    Node MSD Cap: BMI : 0 ERLD : 16
+  TE IS Nbrs   :
+    Nbr   : srsim-border.00                     
+    Default Metric  : 10
+    Sub TLV Len     : 26
+    IF Addr   : 10.1.2.2
+    Nbr IP    : 10.1.2.1
+    LclId    : 333
+    RmtId    : 4
+    Unknown Sub TLV: 15 Len 2 :01 00 
+
+-------------------------------------------------------------------------------
+LSP ID    : srsim-l1frr.00-00                           Level     : L1 
+Sequence  : 0x2                    Checksum  : 0x1fdd   Lifetime  : 633
+Version   : 1                      Pkt Type  : 18       Pkt Ver   : 1
+Attributes: L1                     Max Area  : 0        Alloc Len : 101
+SYS ID    : 0000.0001.0004         SysID Len : 6        Used Len  : 101
+ 
+TLVs : 
+  Supp Protocols:
+    Protocols     : IPv4
+  Area Addresses:
+    Area Address : (3) 49.0011
+  IS-Hostname   : srsim-l1frr
+  Router Cap : 10.255.1.4, D:0, S:0
+  Router ID   :
+    Router ID   : 10.255.1.4
+  TE IS Nbrs   :
+    Nbr   : srsim-border.00                     
+    Default Metric  : 10
+    Sub TLV Len     : 0
+  I/F Addresses :
+    I/F Address   : 10.255.1.4
+  TE IP Reach   :
+    Default Metric  : 10
+    Control Info:    , prefLen 32
+    Prefix   : 10.255.1.4
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.1.3.0
+
+Level (1) LSP Count : 4
+
+Displaying Level 2 database
+-------------------------------------------------------------------------------
+LSP ID    : l2core.00-00                                Level     : L2 
+Sequence  : 0x4                    Checksum  : 0x492c   Lifetime  : 921
+Version   : 1                      Pkt Type  : 20       Pkt Ver   : 1
+Attributes: L1L2                   Max Area  : 0        Alloc Len : 136
+SYS ID    : 0000.0000.0001         SysID Len : 6        Used Len  : 136
+ 
+TLVs : 
+  Supp Protocols:
+    Protocols     : IPv4
+  Area Addresses:
+    Area Address : (3) 49.0100
+  IS-Hostname   : l2core
+  Router Cap : 10.255.0.1, D:0, S:0
+  Router ID   :
+    Router ID   : 10.255.0.1
+  TE IS Nbrs   :
+    Nbr   : srsim-border.00                     
+    Default Metric  : 10
+    Sub TLV Len     : 0
+    Nbr   : frr-border.00                       
+    Default Metric  : 10
+    Sub TLV Len     : 0
+    Nbr   : junos-border.00                     
+    Default Metric  : 10
+    Sub TLV Len     : 0
+  I/F Addresses :
+    I/F Address   : 10.255.0.1
+  TE IP Reach   :
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.1.0.0
+    Default Metric  : 10
+    Control Info:    , prefLen 32
+    Prefix   : 10.255.0.1
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.2.0.0
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.3.0.0
+
+-------------------------------------------------------------------------------
+LSP ID    : srsim-border.00-00                          Level     : L2 
+Sequence  : 0x10                   Checksum  : 0x4627   Lifetime  : 1161
+Version   : 1                      Pkt Type  : 20       Pkt Ver   : 1
+Attributes: L1L2                   Max Area  : 3        Alloc Len : 1492
+SYS ID    : 0000.0001.0001         SysID Len : 6        Used Len  : 138
+ 
+TLVs : 
+  Area Addresses:
+    Area Address : (3) 49.0011
+  Supp Protocols:
+    Protocols     : IPv4
+  IS-Hostname   : srsim-border
+  Router ID   :
+    Router ID   : 10.255.1.1
+  I/F Addresses :
+    I/F Address   : 10.255.1.1
+    I/F Address   : 10.1.0.2
+  TE IS Nbrs   :
+    Nbr   : l2core.00                           
+    Default Metric  : 16777214
+    Sub TLV Len     : 12
+    IF Addr   : 10.1.0.2
+    Nbr IP    : 10.1.0.1
+  TE IP Reach   :
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.1.0.0
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.1.1.0
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.1.2.0
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.1.3.0
+    Default Metric  : 0
+    Control Info:    , prefLen 32
+    Prefix   : 10.255.1.1
+
+-------------------------------------------------------------------------------
+LSP ID    : frr-border.00-00                            Level     : L2 
+Sequence  : 0x5                    Checksum  : 0x4c48   Lifetime  : 950
+Version   : 1                      Pkt Type  : 20       Pkt Ver   : 1
+Attributes: L1L2                   Max Area  : 0        Alloc Len : 127
+SYS ID    : 0000.0002.0001         SysID Len : 6        Used Len  : 127
+ 
+TLVs : 
+  Supp Protocols:
+    Protocols     : IPv4
+  Area Addresses:
+    Area Address : (3) 49.0012
+  IS-Hostname   : frr-border
+  Router Cap : 10.255.2.1, D:0, S:0
+  Router ID   :
+    Router ID   : 10.255.2.1
+  TE IS Nbrs   :
+    Nbr   : l2core.00                           
+    Default Metric  : 10
+    Sub TLV Len     : 0
+  I/F Addresses :
+    I/F Address   : 10.255.2.1
+  TE IP Reach   :
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.2.0.0
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.2.1.0
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.2.2.0
+    Default Metric  : 10
+    Control Info:    , prefLen 32
+    Prefix   : 10.255.2.1
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.2.3.0
+
+-------------------------------------------------------------------------------
+LSP ID    : junos-border.00-00                          Level     : L2 
+Sequence  : 0x6                    Checksum  : 0xec66   Lifetime  : 975
+Version   : 1                      Pkt Type  : 20       Pkt Ver   : 1
+Attributes: L1L2                   Max Area  : 0        Alloc Len : 193
+SYS ID    : 0000.0003.0001         SysID Len : 6        Used Len  : 193
+ 
+TLVs : 
+  Area Addresses:
+    Area Address : (3) 49.0013
+  Unknown TLV   : 14 Len 2    :
+    05 D4 
+  Supp Protocols:
+    Protocols     : IPv4
+    Protocols     : IPv6
+  Router ID   :
+    Router ID   : 10.255.3.1
+  I/F Addresses :
+    I/F Address   : 10.255.3.1
+  IS-Hostname   : junos-border
+  TE IP Reach   :
+    Default Metric  : 0
+    Control Info:    , prefLen 32
+    Prefix   : 10.255.3.1
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.3.0.0
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.3.1.0
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.3.2.0
+    Default Metric  : 10
+    Control Info:    , prefLen 30
+    Prefix   : 10.3.3.0
+    Default Metric  : 20
+    Control Info:    , prefLen 32
+    Prefix   : 10.255.3.4
+    Default Metric  : 10
+    Control Info:    , prefLen 32
+    Prefix   : 10.255.3.2
+    Default Metric  : 10
+    Control Info:    , prefLen 32
+    Prefix   : 10.255.3.3
+  Router Cap : 10.255.3.1, D:0, S:0
+    Node MSD Cap: BMI : 0 ERLD : 16
+  TE IS Nbrs   :
+    Nbr   : l2core.00                           
+    Default Metric  : 10
+    Sub TLV Len     : 26
+    IF Addr   : 10.3.0.2
+    Nbr IP    : 10.3.0.1
+    LclId    : 333
+    RmtId    : 3
+    Unknown Sub TLV: 15 Len 2 :01 00 
+
+Level (2) LSP Count : 4
+-------------------------------------------------------------------------------
+Control Info     : D = Prefix Leaked Down
+                   S = Sub-TLVs Present
+Attribute Flags  : N = Node Flag
+                   R = Re-advertisement Flag
+                   X = External Prefix Flag
+                   E = Entropy Label Capability (ELC) Flag
+Adj-SID Flags    : v4/v6 = IPv4 or IPv6 Address-Family
+                   B = Backup Flag
+                   V = Adj-SID carries a value
+                   L = value/index has local significance
+                   S = Set of Adjacencies
+                   P = Persistently allocated
+Prefix-SID Flags : R = Re-advertisement Flag
+                   N = Node-SID Flag
+                   nP = no penultimate hop POP
+                   E = Explicit-Null Flag
+                   V = Prefix-SID carries a value
+                   L = value/index has local significance
+Lbl-Binding Flags: v4/v6 = IPv4 or IPv6 Address-Family
+                   M = Mirror Context Flag
+                   S = SID/Label Binding flooding
+                   D = Prefix Leaked Down
+                   A = Attached Flag
+SABM-flags Flags:  R = RSVP-TE
+                   S = SR-TE
+                   F = LFA
+                   X = FLEX-ALGO
+FAD-flags Flags:   M = Prefix Metric
+===============================================================================
+
+[/]
+
+===============================================================================
+Rtr Base ISIS Instance 0 Status
+===============================================================================
+ISIS Cfg System Id           : 0000.0001.0001
+ISIS Oper System Id          : 0000.0001.0001
+ISIS Cfg Router Id           : 0.0.0.0
+ISIS Oper Router Id          : 10.255.1.1
+ISIS Cfg IPv6 Router Id      : ::
+ISIS Oper IPv6 Router Id     : ::
+ASN                          : 0
+Admin State                  : Up
+Oper State                   : Up
+Ipv4 Routing                 : Enabled
+Ipv6 Routing                 : Disabled
+Mcast Ipv4 Routing           : Enabled, Native
+Mcast Ipv6 Routing           : Disabled
+Last Enabled                 : 10/02/2026 12:27:35
+Level Capability             : L1L2
+Authentication Check         : True
+Auth Keychain                : Disabled
+Authentication Type          : None
+CSNP-Authentication          : Enabled
+HELLO-Authentication         : Enabled
+PSNP-Authentication          : Enabled
+Periodic CSNP on P2P intf    : Enabled
+Traffic Engineering          : Disabled
+Oper IPv6 TE Router Id       : ::
+Graceful Restart             : Disabled
+GR Helper Mode               : Disabled
+Overload-On-Boot Timeout     : 0
+Overload Max-Metric          : True
+Overload-On-Boot Max-Metric  : False
+Overload Include Locators    : Disabled
+Ovl Export Interlevel        : Disabled
+Ovl Export External          : Disabled
+Ovl FIB Error Notify Only    : Disabled
+Ovl FIB Error Retry          : N.A.
+LSP Lifetime                 : 1200
+LSP Min Remaining Lifetime   : N.A.
+LSP Refresh Half Interval    : 600 (Config)  600 (Oper)
+LSP Wait (ms)                : 5000 (Max)  10 (Initial)  1000 (Second)
+LSP MTU Size                 : 1492 (Config)
+L1 LSP MTU Size              : 1492 (Config)  1492 (Oper)
+L2 LSP MTU Size              : 1492 (Config)  1492 (Oper)
+L1 MAX LSP MTU Size          : 8915
+L2 MAX LSP MTU Size          : 8915
+Adjacency Check              : loose
+L1 Auth Keychain             : Disabled
+L1 Auth Type                 : none
+L1 CSNP-Authentication       : Enabled
+L1 HELLO-Authentication      : Enabled
+L1 PSNP-Authentication       : Enabled
+L1 Preference                : 15
+L1 Ext. Preference           : 160
+L1 Wide Metrics              : Enabled
+L1 LSDB Overload             : Manual  (Indefinitely in overload)
+L1 LSPs                      : 4
+L1 Default Metric            : 10
+L1 IPv6 Def Metric           : 10
+L1 Mcast IPv4 Def Metric     : 10
+L1 Mcast IPv6 Def Metric     : 10
+L1 Adv Router Cap            : Enabled
+L1 Bier Template             : None, Disabled
+L1 Total Exp Routes          : 0
+All-L1-MacAddr (Cfg)         : 01:80:c2:00:00:14
+Last SPF                     : 10/02/2026 12:36:05
+SPF Wait (ms)                : 10000 (Max)  1000 (Initial)  1000 (Second)
+Multi-topology               : Disabled
+IPv6-Unicast MT2             : Disabled
+IPv4-Multicast MT3           : Disabled
+IPv6-Multicast MT4           : Disabled
+Area Addresses               : 49.0011
+Standard Multi-Instance      : Disabled
+IID TLV                      : Disabled
+Prefix Attributes TLV        : Disabled
+L2 Auth Keychain             : Disabled
+L2 Auth Type                 : none
+L2 CSNP-Authentication       : Enabled
+L2 HELLO-Authentication      : Enabled
+L2 PSNP-Authentication       : Enabled
+L2 Preference                : 18
+L2 Ext. Preference           : 165
+L2 Wide Metrics              : Enabled
+L2 LSDB Overload             : Manual  (Indefinitely in overload)
+L2 LSPs                      : 4
+L2 Default Metric            : 10
+L2 IPv6 Def Metric           : 10
+L2 Mcast IPv4 Def Metric     : 10
+L2 Mcast IPv6 Def Metric     : 10
+L2 Adv Router Cap            : Enabled
+L2 Bier Template             : None, Disabled
+L2 Total Exp Routes          : 0
+All-L2-MacAddr (Cfg)         : 01:80:c2:00:00:15
+Export Policies              : None
+Import Policies              : None
+LFA Policies                 : None
+Multicast Import             : None
+Advertise-Passive-Only       : Disabled
+Ignore Attached Bit          : Disabled
+Suppress Attached Bit        : Disabled
+Default Route Tag            : None
+Rib Prio List High           : None
+Rib Prio Tag High            : None
+Ldp Sync Admin State         : Up
+LDP-over-RSVP                : Disabled
+IGP-Shortcut                 : Disabled
+IGP SC Allow SR over SR-TE   : Disabled
+IPv4 IGP SC Tunn-Nhop        : Res-Disabled
+IPv6 IGP SC Tunn-Nhop        : Res-Disabled
+SRv4 IGP SC Tunn-Nhop        : Res-Disabled
+SRv6 IGP SC Tunn-Nhop        : Res-Disabled
+Advertise-Tunnel-Link        : Disabled
+Export Limit                 : 0
+Exp Lmt Log Percent          : 0
+Loopfree-Alternate           : Disabled
+Remote-LFA                   : Disabled 
+Max PQ Cost                  : 4261412864
+Remote-LFA (node-protect)    : Disabled 
+Max PQ nodes (node-protect)  : 16
+Augment-route-table          : Disabled
+TI-LFA                       : Disabled 
+Max SR FRR Labels            : 2
+TI-LFA (node-protect)        : Disabled 
+L1 LFA                       : Included
+L2 LFA                       : Included
+Advertise Router Cap         : Disabled
+Hello Padding                : Disabled
+L1 Hello Padding             : Disabled
+L2 Hello Padding             : Disabled
+Ignore Lsp Errors            : Disabled
+Ignore Narrow Metric         : Disabled
+Reference Bandwidth          : 0
+Ucast Import Disable         : None
+Segment Routing              : Disabled
+Segment Routing MT2          : Disabled
+Flex Algo                    : Down
+Mapping Server               : Disabled
+Purge Originator Id          : Disabled
+Class Based Forwarding       : Disabled
+Entropy Label                : Enabled 
+Override ELC                 : Disabled 
+Micro loop avoidance         : Disabled fib-delay 15 
+Database export              : Disabled
+IGP identifier               : N.A.
+BGP LS identifier            : N.A.
+Reachable LS only            : N.A.
+MP-TLV Neighbor              : Enabled
+MP-TLV SRLG                  : Enabled
+UPA Received Processing      : Disabled
+UPA Lifetime                 : 180
+UPA Metric                   : 4261412865
+UPA Max Number Advertised    : 32
+===============================================================================
+
+[/]

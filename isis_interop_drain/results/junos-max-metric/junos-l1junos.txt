@@ -1,0 +1,11 @@
+IS-IS level 1 link-state database:
+LSP ID                      Sequence Checksum Lifetime Attributes
+junos-border.00-00               0xa   0xb48a     1160 L1 L2
+junos-l1srsim.00-00              0x3   0xcef0      582 L1
+junos-l1junos.00-00              0x3   0x3409      588 L1
+junos-l1frr.00-00                0x4   0x9f4a      518 L1
+  4 LSPs
+
+IS-IS level 2 link-state database:
+  0 LSPs
+
