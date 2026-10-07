@@ -4,5 +4,3 @@ clab-*/
 license.txt
 *.lic
 __pycache__/
-# Working notes: they name the internal lab server and user
-2026-10-02-srsim-multi-border-findings.md
