@@ -1,6 +1,6 @@
 # labs
 
-Containerlab labs used for the posts of [blog.antoinekh.dev](https://blog.antoinekh.dev/).
+Network labs, mostly [containerlab](https://containerlab.dev). Some of them are used in the posts of [blog.antoinekh.dev](https://blog.antoinekh.dev/).
 
 | Lab | Role |
 |-----|------|
