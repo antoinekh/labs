@@ -1,0 +1,76 @@
+
+ SR OS Software
+ Copyright (c) Nokia 2026.  All Rights Reserved.
+ 
+ Trademarks
+ 
+ Nokia and the Nokia logo are registered trademarks of Nokia. All other
+ trademarks are the property of their respective owners.
+ 
+ IMPORTANT: READ CAREFULLY
+ 
+ The SR OS Software (the "Software") is proprietary to Nokia and is subject
+ to and governed by the terms and conditions of the End User License
+ Agreement accompanying the product, made available at the time of your order,
+ or posted on the Nokia website (collectively, the "EULA").  As set forth
+ more fully in the EULA, use of the Software is strictly limited to your 
+ internal use.  Downloading, installing, or using the Software constitutes
+ acceptance of the EULA and you are binding yourself and the business entity
+ that you represent to the EULA.  If you do not agree to all of the terms of
+ the EULA, then Nokia is unwilling to license the Software to you and (a) you
+ may not download, install or use the Software, and (b) you may return the
+ Software as more fully set forth in the EULA.
+ 
+ This product contains cryptographic features and is subject to United States 
+ and local country laws governing import, export, transfer and use. Delivery 
+ of Nokia cryptographic products does not imply third-party authority to 
+ import, export, distribute or use encryption.
+ 
+ If you require further assistance please contact us by sending an email
+ to support@nokia.com.
+
+
+[/]
+
+[/]
+
+===============================================================================
+Rtr Base ISIS Instance 0 Database 
+===============================================================================
+LSP ID                                  Sequence  Checksum Lifetime Attributes
+-------------------------------------------------------------------------------
+
+Displaying Level 1 database
+-------------------------------------------------------------------------------
+border-srsim.00-00                      0x6       0x763    1137     L1L2 ATT
+border-frr.00-00                        0x5       0x58e6   1103     L1L2 ATT
+                                                                    OV
+l1-srsim.00-00                          0x4       0xae73   858      L1
+l1-junos.00-00                          0x5       0x116e   1135     L1
+l1-frr.00-00                            0x2       0x3d79   828      L1
+Level (1) LSP Count : 5
+
+Displaying Level 2 database
+-------------------------------------------------------------------------------
+Level (2) LSP Count : 0
+===============================================================================
+
+[/]
+
+===============================================================================
+Route Table (Router: Base)
+===============================================================================
+Dest Prefix[Flags]                            Type    Proto     Age        Pref
+      Next Hop[Interface Name]                                    Metric   
+-------------------------------------------------------------------------------
+0.0.0.0/0                                     Remote  ISIS      00h00m39s  15
+       10.1.1.1                                                     10
+-------------------------------------------------------------------------------
+No. of Routes: 1
+Flags: n = Number of times nexthop is repeated
+       B = BGP backup route available
+       L = LFA nexthop available
+       S = Sticky ECMP requested
+===============================================================================
+
+[/]
