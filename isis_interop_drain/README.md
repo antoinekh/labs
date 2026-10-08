@@ -2,6 +2,8 @@
 
 Containerlab labs that drain an IS-IS L1/L2 router with each vendor as the drained router (Nokia SR OS, Juniper Junos, FRR), and read what the L1 routers of each vendor do with their default route. This is the follow-up of [`isis_interop`](../isis_interop/README.md), which has only one SR OS L1/L2 router.
 
+Blog post: [Draining an IS-IS router: three vendors, three LSPs, and a bug in FRR](https://blog.antoinekh.dev/posts/isis-draining-three-vendors/). First post, with one SR OS L1/L2 router: [35 years of IS-IS, and vendors still disagree on two bits](https://blog.antoinekh.dev/posts/isis-35-years-two-bits/).
+
 Releases: Nokia SR-SIM 26.3.R1, Juniper vJunos-router 23.4R2-S6.9, FRR 10.2.5. All links are point-to-point, with wide metrics. The L1 routers have no exit other than the default route from the attached bit (ATT) of the L1/L2 routers.
 
 ## Results

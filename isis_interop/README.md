@@ -2,6 +2,8 @@
 
 Small containerlab lab that shows a difference between Nokia SR OS, Juniper Junos and FRR when an L1 router receives an IS-IS LSP with the attached bit (ATT) and the overload bit (OL) set at the same time.
 
+Blog post: [35 years of IS-IS, and vendors still disagree on two bits](https://blog.antoinekh.dev/posts/isis-35-years-two-bits/). Follow-up, with each vendor as the drained router: [Draining an IS-IS router: three vendors, three LSPs, and a bug in FRR](https://blog.antoinekh.dev/posts/isis-draining-three-vendors/), lab [`isis_interop_drain`](../isis_interop_drain/README.md).
+
 Result on this lab (SR OS 24.10.R3, vJunos-router 23.4R2-S6.9, FRR 10.2.5):
 
 | L1 router | `border` sends ATT only | `border` sends ATT + OL | `border` sends OL only (ATT suppressed) | `border` sends max-metric (no OL, no ATT) |
