@@ -535,7 +535,6 @@ In short, in these tests the `ATT` bit is absent from the LSP of `border` whenev
 
 - The wide-metric value of Junos (16,777,214) is the one that SR OS sends.
 - On Junos, an L1-L2 router in overload mode clears its attached bit in general, and "this is also true" with `advertise-high-metrics`. On SR OS, the plain `overload` keeps `ATT` and only the max-metric mode clears it.
-- This is documentation only: a Junos L1-L2 router as the sender was not tested on the lab.
 
 ### What the Nokia documentation says
 
