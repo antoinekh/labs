@@ -1,0 +1,21 @@
+size=10 branch=bulk-10
+  edit seconds=1.49
+  after edit nodes+=2 rels+=10
+  diff seconds=13.27
+  after diff nodes+=34 rels+=41
+  merge seconds=22.28
+  after merge nodes+=34 rels+=51
+size=100 branch=bulk-100
+  edit seconds=5.08
+  after edit nodes+=2 rels+=100
+  diff seconds=8.82
+  after diff nodes+=304 rels+=401
+  merge seconds=16.32
+  after merge nodes+=304 rels+=501
+size=1000 branch=bulk-1000
+  edit seconds=41.03
+  after edit nodes+=2 rels+=1000
+  diff seconds=10.60
+  after diff nodes+=3004 rels+=4001
+  merge seconds=43.03
+  after merge nodes+=3004 rels+=5001

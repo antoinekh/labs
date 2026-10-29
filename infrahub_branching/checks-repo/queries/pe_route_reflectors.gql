@@ -1,0 +1,30 @@
+query pe_route_reflectors {
+  NetDevice(role__value: "pe") {
+    edges {
+      node {
+        name { value }
+        bgp_sessions {
+          edges {
+            node {
+              status { value }
+              peer {
+                node {
+                  ... on NetBgpSession {
+                    device {
+                      node {
+                        ... on NetDevice {
+                          name { value }
+                          status { value }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

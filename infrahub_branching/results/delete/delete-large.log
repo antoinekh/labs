@@ -1,0 +1,20 @@
+ Container infrahub-bench-cache-1 Running 
+ Container infrahub-bench-database-1 Running 
+ Container infrahub-bench-task-manager-db-1 Running 
+ Container infrahub-bench-message-queue-1 Running 
+ Container infrahub-bench-task-manager-1 Running 
+ Container infrahub-bench-infrahub-server-1 Running 
+ Container infrahub-bench-task-manager-db-1 Waiting 
+ Container infrahub-bench-task-manager-db-1 Healthy 
+ Container infrahub-bench-database-1 Waiting 
+ Container infrahub-bench-message-queue-1 Waiting 
+ Container infrahub-bench-cache-1 Waiting 
+ Container infrahub-bench-task-manager-1 Waiting 
+ Container infrahub-bench-task-manager-1 Healthy 
+ Container infrahub-bench-cache-1 Healthy 
+ Container infrahub-bench-database-1 Healthy 
+ Container infrahub-bench-message-queue-1 Healthy 
+ Container infrahub-bench-task-worker-run-30dd496d21a3 Creating 
+ Container infrahub-bench-task-worker-run-30dd496d21a3 Created 
+deleted=25
+./run.sh python /lab/branch_admin.py large  0.23s user 0.17s system 0% cpu 6:30.63 total

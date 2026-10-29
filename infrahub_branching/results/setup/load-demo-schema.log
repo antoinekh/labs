@@ -1,0 +1,49 @@
+ Container infrahub-bench-task-manager-db-1 Running 
+ Container infrahub-bench-task-manager-1 Running 
+ Container infrahub-bench-message-queue-1 Running 
+ Container infrahub-bench-database-1 Running 
+ Container infrahub-bench-cache-1 Running 
+ Container infrahub-bench-infrahub-server-1 Running 
+ Container infrahub-bench-task-manager-db-1 Waiting 
+ Container infrahub-bench-task-manager-db-1 Healthy 
+ Container infrahub-bench-database-1 Waiting 
+ Container infrahub-bench-message-queue-1 Waiting 
+ Container infrahub-bench-cache-1 Waiting 
+ Container infrahub-bench-task-manager-1 Waiting 
+ Container infrahub-bench-task-manager-1 Healthy 
+ Container infrahub-bench-cache-1 Healthy 
+ Container infrahub-bench-database-1 Healthy 
+ Container infrahub-bench-message-queue-1 Healthy 
+ Container infrahub-bench-task-worker-run-e95d617f86b2 Creating 
+ Container infrahub-bench-task-worker-run-e95d617f86b2 Created 
+ schema 'models/base/dcim.yml' loaded successfully
+ schema 'models/base/ipam.yml' loaded successfully
+ schema 'models/base/location.yml' loaded successfully
+ schema 'models/base/organization.yml' loaded successfully
+ schema 'models/base/routing.yml' loaded successfully
+ schema 'models/base/service.yml' loaded successfully
+ 6 schemas processed in 27.578 seconds.
+ deprecation: default_filter is deprecated [InfraDevice]
+ deprecation: default_filter is deprecated [InfraPlatform]
+ deprecation: default_filter is deprecated [InfraCircuit]
+ deprecation: default_filter is deprecated [InfraVLAN]
+ deprecation: default_filter is deprecated [LocationContinent]
+ deprecation: default_filter is deprecated [LocationCountry]
+ deprecation: default_filter is deprecated [LocationSite]
+ deprecation: default_filter is deprecated [OrganizationManufacturer]
+ deprecation: default_filter is deprecated [OrganizationProvider]
+ deprecation: default_filter is deprecated [OrganizationTenant]
+ deprecation: default_filter is deprecated [OrganizationGeneric]
+ deprecation: default_filter is deprecated [InfraAutonomousSystem]
+ deprecation: default_filter is deprecated [InfraBGPPeerGroup]
+ deprecation: default_filter is deprecated [InfraService]
+ Waiting for schema to sync across all workers
+ Waiting for schema to sync across all workers
+ Waiting for schema to sync across all workers
+ Waiting for schema to sync across all workers
+ Waiting for schema to sync across all workers
+ Waiting for schema to sync across all workers
+ Waiting for schema to sync across all workers
+ Waiting for schema to sync across all workers
+ Schema updated on all workers.
+docker compose -p infrahub-bench run --rm task-worker infrahubctl schema load  0.20s user 0.13s system 0% cpu 57.895 total

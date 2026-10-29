@@ -1,0 +1,20 @@
+ Container infrahub-bench-message-queue-1 Running 
+ Container infrahub-bench-database-1 Running 
+ Container infrahub-bench-cache-1 Running 
+ Container infrahub-bench-task-manager-db-1 Running 
+ Container infrahub-bench-task-manager-1 Running 
+ Container infrahub-bench-infrahub-server-1 Running 
+ Container infrahub-bench-task-manager-db-1 Waiting 
+ Container infrahub-bench-task-manager-db-1 Healthy 
+ Container infrahub-bench-message-queue-1 Waiting 
+ Container infrahub-bench-cache-1 Waiting 
+ Container infrahub-bench-task-manager-1 Waiting 
+ Container infrahub-bench-database-1 Waiting 
+ Container infrahub-bench-cache-1 Healthy 
+ Container infrahub-bench-task-manager-1 Healthy 
+ Container infrahub-bench-database-1 Healthy 
+ Container infrahub-bench-message-queue-1 Healthy 
+ Container infrahub-bench-task-worker-run-4b60574e2e6d Creating 
+ Container infrahub-bench-task-worker-run-4b60574e2e6d Created 
+sites=150 devices=1051 interfaces=3896 intercos=1948 bgp_sessions=2400 services=1200 seconds=542.3
+./run.sh python /lab/gen_data.py --first-site 2 --sites 150  0.22s user 0.10s system 0% cpu 9:09.73 total

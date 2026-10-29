@@ -1,0 +1,1361 @@
+ Container infrahub-bench-cache-1 Running 
+ Container infrahub-bench-message-queue-1 Running 
+ Container infrahub-bench-database-1 Running 
+ Container infrahub-bench-task-manager-db-1 Running 
+ Container infrahub-bench-task-manager-1 Running 
+ Container infrahub-bench-infrahub-server-1 Running 
+ Container infrahub-bench-task-manager-db-1 Waiting 
+ Container infrahub-bench-task-manager-db-1 Healthy 
+ Container infrahub-bench-message-queue-1 Waiting 
+ Container infrahub-bench-cache-1 Waiting 
+ Container infrahub-bench-task-manager-1 Waiting 
+ Container infrahub-bench-database-1 Waiting 
+ Container infrahub-bench-message-queue-1 Healthy 
+ Container infrahub-bench-task-manager-1 Healthy 
+ Container infrahub-bench-database-1 Healthy 
+ Container infrahub-bench-cache-1 Healthy 
+ Container infrahub-bench-task-worker-run-e88cb83fb119 Creating 
+ Container infrahub-bench-task-worker-run-e88cb83fb119 Created 
+[17:32:00] INFO     Loading data with Config(Sites:  infrastructure_edge.py:2582
+                    5, Devices per site: 6, BGP                                 
+                    mesh: True, Additional branches:                            
+                    True)                                                       
+           INFO     Creating Infrastructure Data     infrastructure_edge.py:2588
+[17:32:03] INFO     - Created LocationContinent -    infrastructure_edge.py:2226
+                    North America                                               
+[17:32:05] INFO     - Created LocationContinent -    infrastructure_edge.py:2226
+                    South America                                               
+[17:32:06] INFO     - Created LocationContinent -    infrastructure_edge.py:2226
+                    Africa                                                      
+           INFO     - Created LocationContinent -    infrastructure_edge.py:2226
+                    Europe                                                      
+           INFO     - Created LocationContinent -    infrastructure_edge.py:2226
+                    Asia                                                        
+           INFO     - Created LocationContinent -    infrastructure_edge.py:2226
+                    Oceania                                                     
+[17:32:09] INFO     - Created LocationCountry -      infrastructure_edge.py:2229
+                    United States of America                                    
+           INFO     - Created LocationCountry -      infrastructure_edge.py:2229
+                    Canada                                                      
+[17:32:10] INFO     - Created LocationCountry -      infrastructure_edge.py:2229
+                    Mexico                                                      
+           INFO     - Created LocationCountry -      infrastructure_edge.py:2229
+                    Brazil                                                      
+           INFO     - Created LocationCountry -      infrastructure_edge.py:2229
+                    Morocco                                                     
+           INFO     - Created LocationCountry -      infrastructure_edge.py:2229
+                    Senegal                                                     
+[17:32:11] INFO     - Created LocationCountry -      infrastructure_edge.py:2229
+                    France                                                      
+           INFO     - Created LocationCountry -      infrastructure_edge.py:2229
+                    Spain                                                       
+           INFO     - Created LocationCountry -      infrastructure_edge.py:2229
+                    Italy                                                       
+           INFO     - Created LocationCountry -      infrastructure_edge.py:2229
+                    Japan                                                       
+[17:32:12] INFO     - Created LocationCountry -      infrastructure_edge.py:2229
+                    China                                                       
+           INFO     - Created LocationCountry -      infrastructure_edge.py:2229
+                    Australia                                                   
+           INFO     - Created LocationCountry - New  infrastructure_edge.py:2229
+                    Zealand                                                     
+           INFO     Created continents and countries infrastructure_edge.py:2231
+           INFO     Creating User Accounts, Groups,  infrastructure_edge.py:2595
+                    Roles, Permissions &                                        
+                    Organizations & Platforms                                   
+[17:32:23] INFO     - Created CoreObjectPermission - infrastructure_edge.py:2602
+                    *                                                           
+[17:32:24] INFO     - Created CoreAccountRole -      infrastructure_edge.py:2602
+                    Administrator                                               
+           INFO     - Created CoreAccountRole -      infrastructure_edge.py:2602
+                    Global read-only                                            
+[17:32:25] INFO     - Created CoreAccountRole -      infrastructure_edge.py:2602
+                    Global read-write                                           
+           INFO     - Created CoreAccountRole - Own  infrastructure_edge.py:2602
+                    branches read-write                                         
+[17:32:26] INFO     - Created CoreAccount -          infrastructure_edge.py:2609
+                    pop-builder                                                 
+[17:32:27] INFO     - Created CoreAccount - crm-sync infrastructure_edge.py:2609
+           INFO     - Created CoreAccount - jbauer   infrastructure_edge.py:2609
+           INFO     - Created CoreAccount - cobrian  infrastructure_edge.py:2609
+[17:32:28] INFO     - Created CoreAccount - dpalmer  infrastructure_edge.py:2609
+           INFO     - Created CoreAccount - sudo     infrastructure_edge.py:2609
+           INFO     - Created CoreAccount - elawson  infrastructure_edge.py:2609
+[17:32:29] INFO     - Created CoreAccount -          infrastructure_edge.py:2609
+                    jthompson                                                   
+           INFO     - Created CoreAccount -          infrastructure_edge.py:2609
+                    shernandez                                                  
+           INFO     - Created CoreAccount - rpatel   infrastructure_edge.py:2609
+[17:32:30] INFO     - Created CoreAccount - ocarter  infrastructure_edge.py:2609
+           INFO     - Created CoreAccountGroup -     infrastructure_edge.py:2609
+                    Administrators                                              
+           INFO     - Created CoreAccountGroup -     infrastructure_edge.py:2609
+                    Operations Team                                             
+[17:32:31] INFO     - Created CoreAccountGroup -     infrastructure_edge.py:2609
+                    Engineering Team                                            
+           INFO     - Created CoreAccountGroup -     infrastructure_edge.py:2609
+                    Architecture Team                                           
+[17:32:37] INFO     - Updated CoreAccountRole -      infrastructure_edge.py:2614
+                    Administrator with permissions                              
+[17:32:39] INFO     - Updated CoreAccountRole -      infrastructure_edge.py:2614
+                    Global read-only with                                       
+                    permissions                                                 
+           INFO     - Updated CoreAccountRole -      infrastructure_edge.py:2614
+                    Global read-write with                                      
+                    permissions                                                 
+           INFO     - Updated CoreAccountRole - Own  infrastructure_edge.py:2614
+                    branches read-write with                                    
+                    permissions                                                 
+[17:32:43] INFO     - Updated CoreAccountGroup -     infrastructure_edge.py:2619
+                    Administrators with roles and                               
+                    members                                                     
+           INFO     - Updated CoreAccountGroup -     infrastructure_edge.py:2619
+                    Operations Team with roles and                              
+                    members                                                     
+[17:32:44] INFO     - Updated CoreAccountGroup -     infrastructure_edge.py:2619
+                    Engineering Team with roles and                             
+                    members                                                     
+           INFO     - Updated CoreAccountGroup -     infrastructure_edge.py:2619
+                    Architecture Team with roles and                            
+                    members                                                     
+           INFO     - Created CoreAccountGroup -     infrastructure_edge.py:2630
+                    Administrators                                              
+           INFO     - Created CoreAccountGroup -     infrastructure_edge.py:2630
+                    Operations Team                                             
+           INFO     - Created CoreAccountGroup -     infrastructure_edge.py:2630
+                    Engineering Team                                            
+[17:32:45] INFO     - Created CoreAccountGroup -     infrastructure_edge.py:2630
+                    Architecture Team                                           
+           INFO     - Created CoreStandardGroup -    infrastructure_edge.py:2630
+                    edge_router                                                 
+           INFO     - Created CoreStandardGroup -    infrastructure_edge.py:2630
+                    core_router                                                 
+           INFO     - Created CoreStandardGroup -    infrastructure_edge.py:2630
+                    cisco_devices                                               
+           INFO     - Created CoreStandardGroup -    infrastructure_edge.py:2630
+                    arista_devices                                              
+           INFO     - Created CoreStandardGroup -    infrastructure_edge.py:2630
+                    upstream_interfaces                                         
+           INFO     - Created CoreStandardGroup -    infrastructure_edge.py:2630
+                    backbone_interfaces                                         
+           INFO     - Created CoreStandardGroup -    infrastructure_edge.py:2630
+                    maintenance_circuits                                        
+[17:32:46] INFO     - Created CoreStandardGroup -    infrastructure_edge.py:2630
+                    provisioning_circuits                                       
+           INFO     - Created CoreStandardGroup -    infrastructure_edge.py:2630
+                    backbone_services                                           
+           INFO     - Created InfraPlatform - Cisco  infrastructure_edge.py:2630
+                    IOS                                                         
+[17:32:47] INFO     - Created InfraPlatform - Cisco  infrastructure_edge.py:2630
+                    NXOS SSH                                                    
+           INFO     - Created InfraPlatform -        infrastructure_edge.py:2630
+                    Juniper JunOS                                               
+           INFO     - Created InfraPlatform - Arista infrastructure_edge.py:2630
+                    EOS                                                         
+[17:32:48] INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    Arelion                                                     
+           INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    Colt Technology Services                                    
+[17:32:49] INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    Verizon Business                                            
+[17:32:50] INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    GTT Communications                                          
+           INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    Hurricane Electric                                          
+           INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    Lumen                                                       
+           INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    Zayo                                                        
+           INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    Equinix                                                     
+[17:32:51] INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    Interxion                                                   
+           INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    PCCW Global                                                 
+           INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    Orange S.A                                                  
+           INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    Tata Communications                                         
+           INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    Sprint                                                      
+           INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    NTT America                                                 
+           INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    Cogent Communications                                       
+           INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    Comcast Cable Communication                                 
+           INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    Telecom Italia Sparkle                                      
+[17:32:52] INFO     - Created OrganizationProvider - infrastructure_edge.py:2630
+                    AT&T Services                                               
+           INFO     - Created OrganizationTenant -   infrastructure_edge.py:2630
+                    Duff                                                        
+           INFO     - Created                        infrastructure_edge.py:2630
+                    OrganizationManufacturer -                                  
+                    Juniper                                                     
+           INFO     - Created                        infrastructure_edge.py:2630
+                    OrganizationManufacturer - Cisco                            
+           INFO     - Created                        infrastructure_edge.py:2630
+                    OrganizationManufacturer -                                  
+                    Arista                                                      
+[17:32:53] INFO     - Created                        infrastructure_edge.py:2628
+                    ProfileInfraInterfaceL3 -                                   
+                    upstream_profile                                            
+[17:32:54] INFO     - Created                        infrastructure_edge.py:2628
+                    ProfileInfraInterfaceL3 -                                   
+                    backbone_profile                                            
+           INFO     Creating Tags                    infrastructure_edge.py:2503
+[17:32:57] INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS1299                                                    
+[17:32:59] INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS64496                                                   
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS8220                                                    
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS701                                                     
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS3257                                                    
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS6939                                                    
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS3356                                                    
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS6461                                                    
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS24115                                                   
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS20710                                                   
+[17:33:00] INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS3491                                                    
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS5511                                                    
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS6453                                                    
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS1239                                                    
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS2914                                                    
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS174                                                     
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS7922                                                    
+           INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS6762                                                    
+[17:33:01] INFO     - Created InfraAutonomousSystem  infrastructure_edge.py:2642
+                    - AS7018                                                    
+           INFO     - Created BuiltinTag - blue      infrastructure_edge.py:2642
+[17:33:02] INFO     - Created BuiltinTag - green     infrastructure_edge.py:2642
+           INFO     - Created BuiltinTag - red       infrastructure_edge.py:2642
+           INFO     Creating BGP Peer Groups         infrastructure_edge.py:2424
+           INFO     - Created InfraBGPPeerGroup -    infrastructure_edge.py:2647
+                    POP_INTERNAL                                                
+[17:33:03] INFO     - Created InfraBGPPeerGroup -    infrastructure_edge.py:2647
+                    POP_GLOBAL                                                  
+[17:33:04] INFO     - Created InfraBGPPeerGroup -    infrastructure_edge.py:2647
+                    UPSTREAM_DEFAULT                                            
+[17:33:05] INFO     - Created InfraBGPPeerGroup -    infrastructure_edge.py:2647
+                    UPSTREAM_ARELION                                            
+           INFO     - Created InfraBGPPeerGroup -    infrastructure_edge.py:2647
+                    IX_DEFAULT                                                  
+[17:33:07] INFO     Creating IP Prefixes             infrastructure_edge.py:2654
+           INFO     Creating IP Core Supernet and    infrastructure_edge.py:2656
+                    Pool                                                        
+[17:33:24] INFO     Creating IP Loopback Prefix and  infrastructure_edge.py:2673
+                    Pool                                                        
+[17:33:41] INFO     Creating IP Interconnection      infrastructure_edge.py:2688
+                    Prefix and Pool                                             
+[17:33:42] INFO     Creating IP Management Prefix    infrastructure_edge.py:2708
+                    and Pool                                                    
+[17:33:45] INFO     Creating IP External Supernet    infrastructure_edge.py:2724
+                    and Pool                                                    
+[17:33:48] INFO     Creating IPv6 Core Supernet and  infrastructure_edge.py:2741
+                    Pool                                                        
+[17:33:49] INFO     Creating pool IPv6 Prefixes and  infrastructure_edge.py:2761
+                    IPs                                                         
+[17:34:00] INFO     IP Prefixes Creation Completed   infrastructure_edge.py:2771
+[17:34:42] INFO     IPv6 Address Creation Completed  infrastructure_edge.py:2793
+           INFO     Creating Site and associated     infrastructure_edge.py:2798
+                    objects (Device, Circuit, BGP                               
+                    Sessions)                                                   
+           INFO     following SiteDesign(Edge        infrastructure_edge.py:2803
+                    device: 2, Core device: 2, Leaf                             
+                    device: 2)                                                  
+[17:34:43] INFO     - Created LocationSite - atl1    infrastructure_edge.py:1437
+[17:34:50] INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['atl1-edge1']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['atl1-edge2']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['atl1-core1']                                              
+[17:34:51] INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['atl1-core2']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['atl1-leaf1']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['atl1-leaf2']                                              
+           INFO     [atl1] Creating Interfaces, IPs, infrastructure_edge.py:1517
+                    Circuits & BGP Sessions                                     
+[17:35:04] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet1']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet2']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet3']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet4']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet5']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet6']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet7']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet8']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet9']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet10']                                              
+[17:35:09] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.0/31']                                             
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.2/31']                                             
+[17:35:12] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.1/29']                                          
+[17:35:17] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.2/29']                                          
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.9/29']                                          
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.10/29']                                         
+[17:35:18] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.17/29']                                         
+[17:35:20] INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+[17:35:22] INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+[17:35:23] INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-73ab4ff7ef2d']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-9f23bb728541']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-839f0258bfd4']                                       
+[17:35:24] INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e2736f-6bd9-c737-305d-c51150                            
+                    df3cf9']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e2736f-9bfd-b06c-3057-c51b59                            
+                    05673f']                                                    
+[17:35:25] INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e2736f-a232-6610-3050-c5192c                            
+                    3ec51b']                                                    
+[17:35:41] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet1']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet2']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet3']                                               
+[17:35:42] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet4']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet5']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet6']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet7']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet8']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet9']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet10']                                              
+[17:35:43] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.0/31']                                             
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.2/31']                                             
+[17:35:47] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.25/29']                                         
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.26/29']                                         
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.33/29']                                         
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.34/29']                                         
+[17:35:48] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.41/29']                                         
+           INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-c17576fe4737']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-02a37d252a3e']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-298a24804648']                                       
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27375-269c-ee7e-3052-c512f0                            
+                    ded027']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27375-2c0a-1471-305e-c51b2d                            
+                    8582b2']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27375-3115-338d-3055-c5113c                            
+                    50e358']                                                    
+[17:35:50] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/0']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/1']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/2']                                                
+[17:35:53] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/0']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/1']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/2']                                                
+[17:36:11] INFO      - Connected                      infrastructure_edge.py:898
+                    'atl1-edge1::atl1-edge1-l3-0' <>                            
+                    'atl1-edge2::atl1-edge2-l3-0'                               
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'atl1-edge1::atl1-edge1-l3-1' <>                            
+                    'atl1-edge2::atl1-edge2-l3-1'                               
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'atl1-leaf1::atl1-leaf1-l2-Ethern                           
+                    et1' <>                                                     
+                    'atl1-leaf2::atl1-leaf2-l2-Ethern                           
+                    et1'                                                        
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'atl1-leaf1::atl1-leaf1-l2-Ethern                           
+                    et2' <>                                                     
+                    'atl1-leaf2::atl1-leaf2-l2-Ethern                           
+                    et2'                                                        
+[17:36:12] INFO     - Saving InfraInterfaceL3 -      infrastructure_edge.py:1865
+                    Ethernet1                                                   
+           INFO     - Saving InfraInterfaceL3 -      infrastructure_edge.py:1865
+                    Ethernet2                                                   
+[17:36:13] INFO     - Saving InfraInterfaceL2 -      infrastructure_edge.py:1865
+                    Ethernet1                                                   
+           INFO     - Saving InfraInterfaceL2 -      infrastructure_edge.py:1865
+                    Ethernet2                                                   
+           INFO     atl1 - Creation Completed        infrastructure_edge.py:2817
+           INFO     - Created LocationSite - ord1    infrastructure_edge.py:1437
+[17:36:14] INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['ord1-edge1']                                              
+[17:36:15] INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['ord1-edge2']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['ord1-core1']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['ord1-core2']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['ord1-leaf1']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['ord1-leaf2']                                              
+           INFO     [ord1] Creating Interfaces, IPs, infrastructure_edge.py:1517
+                    Circuits & BGP Sessions                                     
+[17:36:17] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet1']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet2']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet3']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet4']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet5']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet6']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet7']                                               
+[17:36:18] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet8']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet9']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet10']                                              
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.4/31']                                             
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.6/31']                                             
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.49/29']                                         
+[17:36:19] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.50/29']                                         
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.57/29']                                         
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.58/29']                                         
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.65/29']                                         
+[17:36:20] INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-ff2aa3fe80fe']                                       
+[17:36:21] INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-7f0c8f8ac225']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-a194cc7c2e64']                                       
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e2737c-b65b-fbeb-305a-c514ad                            
+                    7f6844']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e2737c-bbaa-a254-3056-c51d0f                            
+                    48d03d']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e2737c-c13e-54fa-305a-c51eaf                            
+                    510696']                                                    
+[17:36:23] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet1']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet2']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet3']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet4']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet5']                                               
+[17:36:24] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet6']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet7']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet8']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet9']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet10']                                              
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.4/31']                                             
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.6/31']                                             
+[17:36:25] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.73/29']                                         
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.74/29']                                         
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.81/29']                                         
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.82/29']                                         
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.89/29']                                         
+[17:36:26] INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-f145bf2648e5']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-90f35bcb2be3']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-8c6ac0f4cb6a']                                       
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e2737d-fb09-a1a4-3059-c51ea2                            
+                    348a66']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e2737e-014e-d5a7-305e-c51651                            
+                    e4d7c6']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e2737e-0a7d-063a-305d-c51881                            
+                    0924ca']                                                    
+[17:36:28] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/0']                                                
+[17:36:29] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/1']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/2']                                                
+[17:36:30] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/0']                                                
+[17:36:31] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/1']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/2']                                                
+[17:36:47] INFO      - Connected                      infrastructure_edge.py:898
+                    'ord1-edge1::ord1-edge1-l3-0' <>                            
+                    'ord1-edge2::ord1-edge2-l3-0'                               
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'ord1-edge1::ord1-edge1-l3-1' <>                            
+                    'ord1-edge2::ord1-edge2-l3-1'                               
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'ord1-leaf1::ord1-leaf1-l2-Ethern                           
+                    et1' <>                                                     
+                    'ord1-leaf2::ord1-leaf2-l2-Ethern                           
+                    et1'                                                        
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'ord1-leaf1::ord1-leaf1-l2-Ethern                           
+                    et2' <>                                                     
+                    'ord1-leaf2::ord1-leaf2-l2-Ethern                           
+                    et2'                                                        
+[17:36:48] INFO     - Saving InfraInterfaceL3 -      infrastructure_edge.py:1865
+                    Ethernet1                                                   
+           INFO     - Saving InfraInterfaceL3 -      infrastructure_edge.py:1865
+                    Ethernet2                                                   
+[17:36:49] INFO     - Saving InfraInterfaceL2 -      infrastructure_edge.py:1865
+                    Ethernet1                                                   
+           INFO     - Saving InfraInterfaceL2 -      infrastructure_edge.py:1865
+                    Ethernet2                                                   
+           INFO     ord1 - Creation Completed        infrastructure_edge.py:2817
+           INFO     - Created LocationSite - jfk1    infrastructure_edge.py:1437
+[17:36:58] INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['jfk1-edge1']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['jfk1-edge2']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['jfk1-core1']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['jfk1-core2']                                              
+[17:36:59] INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['jfk1-leaf1']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['jfk1-leaf2']                                              
+           INFO     [jfk1] Creating Interfaces, IPs, infrastructure_edge.py:1517
+                    Circuits & BGP Sessions                                     
+[17:37:01] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet1']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet2']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet3']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet4']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet5']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet6']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet7']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet8']                                               
+[17:37:02] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet9']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet10']                                              
+[17:37:05] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.8/31']                                             
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.10/31']                                            
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.97/29']                                         
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.98/29']                                         
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.105/29']                                        
+[17:37:06] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.106/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.113/29']                                        
+           INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-c6ba66444b81']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-46db22d25b40']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-b446b6bafef3']                                       
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27387-52e5-f78a-3052-c51d63                            
+                    94ae4b']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27387-5841-d805-3051-c51fa4                            
+                    86bb6b']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27387-5e09-d827-3058-c511ee                            
+                    4cc24e']                                                    
+[17:37:09] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet1']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet2']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet3']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet4']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet5']                                               
+[17:37:10] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet6']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet7']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet8']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet9']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet10']                                              
+[17:37:11] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.8/31']                                             
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.10/31']                                            
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.121/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.122/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.129/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.130/29']                                        
+[17:37:12] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.137/29']                                        
+           INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-7b601288e533']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-3f2801b30440']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-f200570a80a4']                                       
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27388-bd29-98af-3053-c51d5a                            
+                    436a46']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27388-c2d3-d4c0-3054-c51ff9                            
+                    2b1838']                                                    
+[17:37:13] INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27388-c7fa-241d-305f-c51557                            
+                    db93bd']                                                    
+[17:37:14] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/0']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/1']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/2']                                                
+[17:37:15] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/0']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/1']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/2']                                                
+[17:37:34] INFO      - Connected                      infrastructure_edge.py:898
+                    'jfk1-edge1::jfk1-edge1-l3-0' <>                            
+                    'jfk1-edge2::jfk1-edge2-l3-0'                               
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'jfk1-edge1::jfk1-edge1-l3-1' <>                            
+                    'jfk1-edge2::jfk1-edge2-l3-1'                               
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'jfk1-leaf1::jfk1-leaf1-l2-Ethern                           
+                    et1' <>                                                     
+                    'jfk1-leaf2::jfk1-leaf2-l2-Ethern                           
+                    et1'                                                        
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'jfk1-leaf1::jfk1-leaf1-l2-Ethern                           
+                    et2' <>                                                     
+                    'jfk1-leaf2::jfk1-leaf2-l2-Ethern                           
+                    et2'                                                        
+[17:37:35] INFO     - Saving InfraInterfaceL3 -      infrastructure_edge.py:1865
+                    Ethernet1                                                   
+           INFO     - Saving InfraInterfaceL3 -      infrastructure_edge.py:1865
+                    Ethernet2                                                   
+           INFO     - Saving InfraInterfaceL2 -      infrastructure_edge.py:1865
+                    Ethernet1                                                   
+           INFO     - Saving InfraInterfaceL2 -      infrastructure_edge.py:1865
+                    Ethernet2                                                   
+           INFO     jfk1 - Creation Completed        infrastructure_edge.py:2817
+[17:37:36] INFO     - Created LocationSite - den1    infrastructure_edge.py:1437
+[17:37:40] INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['den1-edge1']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['den1-edge2']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['den1-core1']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['den1-core2']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['den1-leaf1']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['den1-leaf2']                                              
+           INFO     [den1] Creating Interfaces, IPs, infrastructure_edge.py:1517
+                    Circuits & BGP Sessions                                     
+[17:37:42] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet1']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet2']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet3']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet4']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet5']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet6']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet7']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet8']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet9']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet10']                                              
+[17:37:43] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.12/31']                                            
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.14/31']                                            
+[17:37:44] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.145/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.146/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.153/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.154/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.161/29']                                        
+           INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-f42dfc66e73f']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-c8b117dc2c7a']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-25abd42c0566']                                       
+[17:37:45] INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27390-3b9f-5b99-305c-c5104a                            
+                    4c4e73']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27390-401e-5f7d-3055-c5104c                            
+                    8644c4']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27390-45a3-8e81-3057-c51086                            
+                    6e50d0']                                                    
+[17:37:46] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet1']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet2']                                               
+[17:37:47] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet3']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet4']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet5']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet6']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet7']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet8']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet9']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet10']                                              
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.12/31']                                            
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.14/31']                                            
+[17:37:48] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.169/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.170/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.177/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.178/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.185/29']                                        
+           INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+[17:37:49] INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-46943f4eb20a']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-424c58d33b25']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-98d262129f08']                                       
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27391-412f-db1d-3058-c510ed                            
+                    64268c']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27391-4772-deb4-305a-c517cc                            
+                    2cf464']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27391-4df2-4385-3051-c51d77                            
+                    d0767a']                                                    
+[17:37:50] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/0']                                                
+[17:37:51] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/1']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/2']                                                
+[17:37:53] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/0']                                                
+[17:37:54] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/1']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/2']                                                
+[17:38:06] INFO      - Connected                      infrastructure_edge.py:898
+                    'den1-edge1::den1-edge1-l3-0' <>                            
+                    'den1-edge2::den1-edge2-l3-0'                               
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'den1-edge1::den1-edge1-l3-1' <>                            
+                    'den1-edge2::den1-edge2-l3-1'                               
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'den1-leaf1::den1-leaf1-l2-Ethern                           
+                    et1' <>                                                     
+                    'den1-leaf2::den1-leaf2-l2-Ethern                           
+                    et1'                                                        
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'den1-leaf1::den1-leaf1-l2-Ethern                           
+                    et2' <>                                                     
+                    'den1-leaf2::den1-leaf2-l2-Ethern                           
+                    et2'                                                        
+           INFO     - Saving InfraInterfaceL3 -      infrastructure_edge.py:1865
+                    Ethernet1                                                   
+           INFO     - Saving InfraInterfaceL3 -      infrastructure_edge.py:1865
+                    Ethernet2                                                   
+[17:38:07] INFO     - Saving InfraInterfaceL2 -      infrastructure_edge.py:1865
+                    Ethernet1                                                   
+           INFO     - Saving InfraInterfaceL2 -      infrastructure_edge.py:1865
+                    Ethernet2                                                   
+           INFO     den1 - Creation Completed        infrastructure_edge.py:2817
+           INFO     - Created LocationSite - dfw1    infrastructure_edge.py:1437
+[17:38:08] INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['dfw1-edge1']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['dfw1-edge2']                                              
+[17:38:09] INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['dfw1-core1']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['dfw1-core2']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['dfw1-leaf1']                                              
+           INFO     - Created InfraDevice -          infrastructure_edge.py:1512
+                    ['dfw1-leaf2']                                              
+           INFO     [dfw1] Creating Interfaces, IPs, infrastructure_edge.py:1517
+                    Circuits & BGP Sessions                                     
+[17:38:13] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet1']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet2']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet3']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet4']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet5']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet6']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet7']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet8']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet9']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet10']                                              
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.16/31']                                            
+[17:38:14] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.18/31']                                            
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.193/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.194/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.201/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.202/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.209/29']                                        
+[17:38:15] INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+[17:38:16] INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-98f8912c864a']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-0e810b90d34e']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-597bf3c08043']                                       
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27397-8a23-1138-305c-c51e9c                            
+                    6e8962']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27397-8ec8-183b-3054-c51972                            
+                    28c77c']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27397-932a-3adb-3058-c51dd6                            
+                    4939d7']                                                    
+[17:38:18] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet1']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet2']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet3']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet4']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet5']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet6']                                               
+[17:38:19] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet7']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet8']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet9']                                               
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['Ethernet10']                                              
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.16/31']                                            
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['10.1.0.18/31']                                            
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.217/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.218/29']                                        
+[17:38:20] INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.225/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.226/29']                                        
+           INFO      - Created IpamIPAddress -       infrastructure_edge.py:1718
+                    ['203.111.0.233/29']                                        
+           INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraBGPSession -     infrastructure_edge.py:1720
+                    None                                                        
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-5feed504dfef']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-46d8384c460a']                                       
+           INFO      - Created InfraCircuit -        infrastructure_edge.py:1722
+                    ['DUFF-e44a54357efb']                                       
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27398-9780-eb1c-3057-c51c47                            
+                    3c5ca0']                                                    
+           INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27398-9c05-e269-3057-c51132                            
+                    30d3f4']                                                    
+[17:38:21] INFO      - Created InfraCircuitEndpoint  infrastructure_edge.py:1726
+                    -                                                           
+                    ['18e27398-a05c-1e31-3050-c510f3                            
+                    6db0c6']                                                    
+[17:38:22] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/0']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/1']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/2']                                                
+[17:38:23] INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/0']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/1']                                                
+           INFO      - Created InfraInterfaceL3 -    infrastructure_edge.py:1716
+                    ['et-0/0/2']                                                
+[17:38:34] INFO      - Connected                      infrastructure_edge.py:898
+                    'dfw1-edge1::dfw1-edge1-l3-0' <>                            
+                    'dfw1-edge2::dfw1-edge2-l3-0'                               
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'dfw1-edge1::dfw1-edge1-l3-1' <>                            
+                    'dfw1-edge2::dfw1-edge2-l3-1'                               
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'dfw1-leaf1::dfw1-leaf1-l2-Ethern                           
+                    et1' <>                                                     
+                    'dfw1-leaf2::dfw1-leaf2-l2-Ethern                           
+                    et1'                                                        
+           INFO      - Connected                      infrastructure_edge.py:898
+                    'dfw1-leaf1::dfw1-leaf1-l2-Ethern                           
+                    et2' <>                                                     
+                    'dfw1-leaf2::dfw1-leaf2-l2-Ethern                           
+                    et2'                                                        
+           INFO     - Saving InfraInterfaceL3 -      infrastructure_edge.py:1865
+                    Ethernet1                                                   
+[17:38:35] INFO     - Saving InfraInterfaceL3 -      infrastructure_edge.py:1865
+                    Ethernet2                                                   
+[17:38:36] INFO     - Saving InfraInterfaceL2 -      infrastructure_edge.py:1865
+                    Ethernet1                                                   
+           INFO     - Saving InfraInterfaceL2 -      infrastructure_edge.py:1865
+                    Ethernet2                                                   
+           INFO     dfw1 - Creation Completed        infrastructure_edge.py:2817
+           INFO     Applying profiles to interfaces   infrastructure_edge.py:938
+                    and update interface groups                                 
+[17:38:52] INFO     Completed applying profiles to    infrastructure_edge.py:982
+                    interfaces                                                  
+[17:38:58] INFO     Completed updating interface     infrastructure_edge.py:1009
+                    groups                                                      
+           INFO     Adding devices to groups         infrastructure_edge.py:1018
+[17:39:01] INFO     Updating device groups           infrastructure_edge.py:1056
+[17:39:03] INFO     Devices have been added to       infrastructure_edge.py:1117
+                    groups                                                      
+           INFO     Creating Full Mesh iBGP SESSION  infrastructure_edge.py:1261
+                    between all the Edge devices                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a2-9998-1f32-3059-c516c96                            
+                    3e7ab)  - Creation Completed                                
+[17:39:04] INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a2-a0ae-455b-305c-c5179f1                            
+                    98dce)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a2-a72b-82a4-3051-c51b9e9                            
+                    988af)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a2-ae09-b957-3056-c51657c                            
+                    4f157)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a2-b491-e717-305e-c51b44a                            
+                    b09d2)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a2-ba6e-7bc3-3053-c51bcca                            
+                    ed6de)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a2-c04d-9bbb-305e-c51a31a                            
+                    fa7b0)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a2-c740-5ce2-3059-c512314                            
+                    3fc22)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a2-d0f4-8028-3053-c51159d                            
+                    427fe)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a2-d925-de2f-3053-c51c7df                            
+                    0c0bb)  - Creation Completed                                
+[17:39:05] INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a2-e036-6e2e-3056-c5138b3                            
+                    9bd15)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a2-ecd2-5528-305a-c5176fb                            
+                    01ffa)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a2-f78f-3b17-3051-c51a30c                            
+                    d0960)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a2-ff18-7053-3056-c5190a2                            
+                    8bc69)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-0604-ffa5-3054-c51bf33                            
+                    ecd4d)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-0d8f-6bfd-305a-c512fe7                            
+                    7f481)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-14cd-70e3-3054-c51bb3e                            
+                    9838e)  - Creation Completed                                
+[17:39:06] INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-1b31-9b98-305d-c51cc00                            
+                    4fd9d)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-2327-76f9-3050-c516636                            
+                    51a6a)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-2b82-7fd6-3059-c51c8cd                            
+                    bd1f3)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-31f4-33da-3056-c518bcf                            
+                    6edbc)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-37d4-4134-305d-c51d5e6                            
+                    07420)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-3ea3-0c0d-305e-c5128b7                            
+                    fd367)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-456b-ecaf-3053-c5151df                            
+                    8be06)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-4c49-7f97-3051-c51e2bc                            
+                    7f7d1)  - Creation Completed                                
+[17:39:07] INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-522f-316c-3051-c512ae8                            
+                    e3e07)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-5841-31df-305c-c5178ec                            
+                    3ce97)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-5f13-b2ea-305a-c5121fc                            
+                    91ad6)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-66fc-efa9-305f-c5106ca                            
+                    47eea)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-6e7c-f97e-3054-c518cda                            
+                    a5d07)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-7885-acd2-3051-c5111be                            
+                    3cf28)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-8186-94e3-3059-c51e733                            
+                    d8c81)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-8833-99ef-3056-c51abcf                            
+                    21afe)  - Creation Completed                                
+[17:39:08] INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-8f56-e1b4-3055-c515ca7                            
+                    6b94f)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-9727-fe4e-305e-c511e9b                            
+                    85b77)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-9d25-deaf-3051-c510e14                            
+                    2eb50)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-a49b-d3be-3057-c51560c                            
+                    be081)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-ad46-5ff4-305f-c5119a8                            
+                    0a517)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-b5d5-33be-305e-c5174bb                            
+                    6741d)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-c0d7-d87c-305d-c5122e8                            
+                    d1d68)  - Creation Completed                                
+[17:39:09] INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-c985-2563-3058-c513fef                            
+                    87de0)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-d27b-ba8e-305f-c517dcd                            
+                    a9743)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-db60-babb-3055-c5106b5                            
+                    a26e7)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-e267-c254-305c-c51b2ae                            
+                    dc2b1)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-e8d7-b2f3-305f-c516f2f                            
+                    59730)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-f106-e7fc-3050-c51cd74                            
+                    c6b3a)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-f748-228b-3052-c514999                            
+                    77ea3)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a3-fd68-4ed5-3051-c5142ae                            
+                    242d1)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-036d-3cd0-3054-c51c932                            
+                    fc7ca)  - Creation Completed                                
+[17:39:10] INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-0a3a-c3f4-3050-c51d5f1                            
+                    1dbfc)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-116c-e8fc-305d-c517569                            
+                    bb9a6)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-1820-ddc8-3058-c513031                            
+                    b632e)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-1ec8-a395-3053-c51c482                            
+                    b5b85)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-2509-8852-3051-c51c079                            
+                    ca4b5)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-2f12-e35f-305b-c515767                            
+                    d2708)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-381f-5bd2-3054-c51876f                            
+                    543d8)  - Creation Completed                                
+[17:39:11] INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-3ed8-fc10-3057-c516034                            
+                    f8e6b)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-46cf-82e2-3050-c514668                            
+                    a6cab)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-4e01-a601-3050-c51428b                            
+                    44a00)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-5478-f4af-3051-c51ef96                            
+                    3a595)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-5c12-32ca-305f-c51e284                            
+                    1bab7)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-627e-ae61-3054-c51eaef                            
+                    36f66)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-6937-f6d7-3058-c5194aa                            
+                    b75f6)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-71a6-5b21-305a-c516a62                            
+                    c1b65)  - Creation Completed                                
+[17:39:12] INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-7a8d-6f61-3054-c51a4f1                            
+                    474e8)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-82d5-45a9-3054-c51731e                            
+                    6cd7d)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-89ff-5dfe-3059-c519344                            
+                    25fd6)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-90eb-e673-3056-c51abce                            
+                    95e72)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-9756-c8e9-3055-c511331                            
+                    d11d9)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-9d9c-c004-3059-c5135c1                            
+                    d0647)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-a3fa-bbbc-3054-c517be4                            
+                    53632)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-ab84-3e19-3057-c51591d                            
+                    2331f)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-b329-fac6-3050-c51a07d                            
+                    c8820)  - Creation Completed                                
+[17:39:13] INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-b9f0-9491-3051-c51d705                            
+                    ef951)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-c09c-d91f-3053-c51d557                            
+                    f7fe6)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-c766-17e7-3058-c51eb62                            
+                    5c05b)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-ce96-e97b-305b-c51790d                            
+                    d11f8)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-d64d-387a-305f-c51ce1a                            
+                    f15be)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-dcba-05da-305d-c510988                            
+                    93977)  - Creation Completed                                
+           INFO     InfraBGPSession                  infrastructure_edge.py:1313
+                    (18e273a4-e35a-55ef-3056-c51d171                            
+                    af505)  - Creation Completed                                
+           INFO     Creating Backbone Links &        infrastructure_edge.py:1126
+                    Circuits                                                    
+[17:39:17] INFO     - Done allocating addresses      infrastructure_edge.py:1152
+['InfraBackBoneServiceUpsert'] The pool for service_identifier has not been 
+provisioned yet. at service_identifier
+
+docker compose -p infrahub-bench run --rm -e  task-worker infrahubctl run   0.33s user 0.22s system 0% cpu 7:26.45 total

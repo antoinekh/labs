@@ -1,0 +1,205 @@
+---
+# yaml-language-server: $schema=https://schema.infrahub.app/infrahub/schema/latest.json
+version: "1.0"
+nodes:
+  - name: Device
+    namespace: Net
+    label: "Router"
+    icon: "mdi:router"
+    human_friendly_id: ["name__value"]
+    display_label: "{{ name__value }}"
+    order_by: ["name__value"]
+    attributes:
+      - name: name
+        kind: Text
+        unique: true
+      - name: site
+        kind: Text
+      - name: role
+        kind: Dropdown
+        choices:
+          - name: core
+            color: "#7f7fff"
+          - name: pe
+            color: "#bf7fbf"
+          - name: rr
+            color: "#aeeeee"
+          - name: firewall
+            color: "#ff9f7f"
+      - name: asn
+        kind: Number
+      - name: status
+        kind: Dropdown
+        default_value: active
+        choices:
+          - name: active
+            color: "#7fbf7f"
+          - name: maintenance
+            color: "#ffd27f"
+          - name: down
+            color: "#ff7f7f"
+      - name: pci_certified
+        label: "PCI-DSS certified"
+        kind: Boolean
+        default_value: false
+    relationships:
+      - name: interfaces
+        peer: NetInterface
+        identifier: net_device__interface
+        cardinality: many
+        kind: Component
+        optional: true
+      - name: bgp_sessions
+        peer: NetBgpSession
+        identifier: net_device__bgp_session
+        cardinality: many
+        kind: Component
+        optional: true
+      - name: services
+        peer: NetAppService
+        identifier: net_device__app_service
+        cardinality: many
+        kind: Generic
+        optional: true
+
+  - name: Interface
+    namespace: Net
+    label: "Interface"
+    icon: "mdi:ethernet"
+    human_friendly_id: ["device__name__value", "name__value"]
+    display_label: "{{ device__name__value }} {{ name__value }}"
+    order_by: ["name__value"]
+    uniqueness_constraints:
+      - ["device", "name__value"]
+    attributes:
+      - name: name
+        kind: Text
+      - name: ip_address
+        kind: Text
+        optional: true
+    relationships:
+      - name: device
+        peer: NetDevice
+        identifier: net_device__interface
+        cardinality: one
+        kind: Parent
+        optional: false
+      - name: interco
+        peer: NetInterco
+        identifier: net_interco__interface
+        cardinality: one
+        kind: Attribute
+        optional: true
+
+  - name: Interco
+    namespace: Net
+    label: "Interco"
+    icon: "mdi:transit-connection-variant"
+    human_friendly_id: ["name__value"]
+    display_label: "{{ name__value }}"
+    order_by: ["name__value"]
+    attributes:
+      - name: name
+        kind: Text
+        unique: true
+      - name: subnet
+        kind: Text
+      - name: status
+        kind: Dropdown
+        default_value: up
+        choices:
+          - name: up
+            color: "#7fbf7f"
+          - name: down
+            color: "#ff7f7f"
+    relationships:
+      - name: interfaces
+        peer: NetInterface
+        identifier: net_interco__interface
+        cardinality: many
+        max_count: 2
+        kind: Generic
+        optional: true
+
+  - name: BgpSession
+    namespace: Net
+    label: "BGP session"
+    icon: "mdi:handshake"
+    human_friendly_id: ["device__name__value", "remote_ip__value"]
+    display_label: "{{ device__name__value }} -> {{ remote_ip__value }}"
+    order_by: ["remote_ip__value"]
+    uniqueness_constraints:
+      - ["device", "remote_ip__value"]
+    attributes:
+      - name: local_ip
+        kind: Text
+      - name: remote_ip
+        kind: Text
+      - name: remote_as
+        kind: Number
+      - name: status
+        kind: Dropdown
+        default_value: established
+        choices:
+          - name: established
+            color: "#7fbf7f"
+          - name: shutdown
+            color: "#bfbfbf"
+    relationships:
+      - name: device
+        peer: NetDevice
+        identifier: net_device__bgp_session
+        cardinality: one
+        kind: Parent
+        optional: false
+      - name: peer
+        peer: NetBgpSession
+        identifier: net_bgp_session__peer
+        cardinality: one
+        kind: Attribute
+        optional: true
+      - name: interco
+        peer: NetInterco
+        identifier: net_interco__bgp_session
+        cardinality: one
+        kind: Attribute
+        optional: true
+
+  - name: AppService
+    namespace: Net
+    label: "Application service"
+    icon: "mdi:application-cog"
+    human_friendly_id: ["name__value"]
+    display_label: "{{ name__value }}"
+    order_by: ["name__value"]
+    attributes:
+      - name: name
+        kind: Text
+        unique: true
+      - name: owner
+        kind: Text
+      - name: criticality
+        kind: Dropdown
+        choices:
+          - name: low
+            color: "#7fbf7f"
+          - name: high
+            color: "#ffd27f"
+          - name: critical
+            color: "#ff7f7f"
+      - name: compliance
+        kind: Dropdown
+        default_value: none
+        choices:
+          - name: none
+            color: "#bfbfbf"
+          - name: pci_dss
+            label: "PCI-DSS"
+            color: "#7f7fff"
+    relationships:
+      - name: devices
+        peer: NetDevice
+        identifier: net_device__app_service
+        cardinality: many
+        kind: Generic
+        optional: true

@@ -1,0 +1,14 @@
+---
+queries:
+  - name: pe_route_reflectors
+    file_path: queries/pe_route_reflectors.gql
+  - name: pci_services
+    file_path: queries/pci_services.gql
+
+check_definitions:
+  - name: pe_route_reflector_redundancy
+    class_name: RouteReflectorRedundancy
+    file_path: checks/route_reflector_redundancy.py
+  - name: pci_firewalls
+    class_name: PciFirewalls
+    file_path: checks/pci_firewalls.py

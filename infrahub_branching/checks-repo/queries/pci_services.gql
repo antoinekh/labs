@@ -1,0 +1,20 @@
+query pci_services {
+  NetAppService(compliance__value: "pci_dss") {
+    edges {
+      node {
+        id
+        name { value }
+      }
+    }
+  }
+  NetDevice(role__values: ["pe", "firewall"]) {
+    edges {
+      node {
+        id
+        name { value }
+        role { value }
+        pci_certified { value }
+      }
+    }
+  }
+}

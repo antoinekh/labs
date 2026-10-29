@@ -1,0 +1,15 @@
+2026-10-27T17:19:07Z label=empty store_bytes=5653471 tx_bytes=269484032 nodes_rels=19102, 51281 branches=2
+2026-10-27T17:21:02Z label=after-demo-schema store_bytes=5654417 tx_bytes=269484032 nodes_rels=26334, 70979 branches=2
+2026-10-27T17:25:08Z label=after-demo-data store_bytes=5654417 tx_bytes=269484032 nodes_rels=35310, 93031 branches=2
+2026-10-27T17:28:49Z label=empty store_bytes=5653533 tx_bytes=269484032 nodes_rels=19102, 51281 branches=2
+2026-10-27T17:31:47Z label=after-demo-schema store_bytes=26832434 tx_bytes=269484032 nodes_rels=26334, 70979 branches=2
+2026-10-27T17:39:41Z label=after-demo-data store_bytes=47294005 tx_bytes=269484032 nodes_rels=46260, 122838 branches=2
+2026-10-27T17:40:18Z label=after-net-schema store_bytes=47294005 tx_bytes=269484032 nodes_rels=46260, 122838 branches=2
+2026-10-27T17:41:51Z label=after-net-schema store_bytes=48752573 tx_bytes=269484032 nodes_rels=47341, 125874 branches=2
+2026-10-27T17:42:58Z label=after-net-small store_bytes=49866585 tx_bytes=269484032 nodes_rels=48732, 128642 branches=2
+2026-10-27T17:44:55Z label=after-small-branches store_bytes=49907704 tx_bytes=269484032 nodes_rels=48738, 128657 branches=7
+2026-10-27T17:59:05Z label=after-delete-small-branches store_bytes=50127366 tx_bytes=269484032 nodes_rels=48732, 128642 branches=2
+2026-10-27T18:14:06Z label=after-net-large store_bytes=164862352 tx_bytes=269484032 nodes_rels=150967, 336278 branches=27
+2026-10-27T18:15:45Z label=after-large-branches store_bytes=165091837 tx_bytes=269484032 nodes_rels=150993, 336313 branches=52
+2026-10-27T18:19:54Z label=after-bulk-merges store_bytes=166456221 tx_bytes=269484032 nodes_rels=154338, 341869 branches=55
+2026-10-27T18:39:40Z label=after-delete-bench-branches store_bytes=166635159 tx_bytes=269484032 nodes_rels=154399, 342062 branches=6

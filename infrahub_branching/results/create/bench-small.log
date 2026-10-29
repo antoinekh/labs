@@ -1,0 +1,6 @@
+create branch=small-0 seconds=3.296 nodes+=1 rels+=1
+create branch=small-1 seconds=2.654 nodes+=1 rels+=1
+create branch=small-2 seconds=6.053 nodes+=1 rels+=1
+create branch=small-3 seconds=52.947 nodes+=1 rels+=1
+create branch=small-4 seconds=2.516 nodes+=1 rels+=1
+edit branch=small-0 devices=10 seconds=2.658 nodes+=1 rels+=10

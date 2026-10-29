@@ -1,0 +1,41 @@
+---
+# ~/.docker/config.json injects a proxy into every container; compose service names must bypass it.
+x-no-proxy: &no_proxy
+  NO_PROXY: &no_proxy_value "localhost,127.0.0.0/8,10.0.0.0/8,172.0.0.0/8,192.168.0.0/16,infrahub-server,task-worker,task-manager,task-manager-db,database,message-queue,cache,gitea"
+  no_proxy: *no_proxy_value
+  INFRAHUB_ANALYTICS_ENABLE: "false"
+
+services:
+  database:
+    environment:
+      <<: *no_proxy
+      # Community edition has no checkpoint procedure; a short interval keeps the store size on disk current.
+      NEO4J_db_checkpoint_interval_time: 10s
+    ports:
+      - 7474:7474
+      - 7687:7687
+  infrahub-server:
+    environment: *no_proxy
+  task-worker:
+    environment: *no_proxy
+  task-manager:
+    environment: *no_proxy
+
+  # Local Git server for the repository that holds the CI checks; nothing leaves the machine.
+  gitea:
+    image: gitea/gitea:1.24.6
+    restart: unless-stopped
+    environment:
+      <<: *no_proxy
+      GITEA__security__INSTALL_LOCK: "true"
+      GITEA__server__ROOT_URL: http://gitea:3000/
+      GITEA__server__HTTP_PORT: "3000"
+      GITEA__database__DB_TYPE: sqlite3
+      GITEA__service__DISABLE_REGISTRATION: "true"
+    volumes:
+      - gitea_data:/data
+    ports:
+      - 3000:3000
+
+volumes:
+  gitea_data:

@@ -1,0 +1,3 @@
+branch=main runs=7 median=1.061s min=0.979s max=2.603s
+branch=read-fresh runs=7 median=1.108s min=0.961s max=3.143s
+branch=read-changed runs=7 median=1.152s min=0.978s max=2.488s

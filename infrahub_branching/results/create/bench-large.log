@@ -1,0 +1,26 @@
+create branch=large-0 seconds=2.037 nodes+=1 rels+=1
+create branch=large-1 seconds=2.235 nodes+=1 rels+=1
+create branch=large-2 seconds=2.235 nodes+=1 rels+=1
+create branch=large-3 seconds=1.180 nodes+=1 rels+=1
+create branch=large-4 seconds=2.205 nodes+=1 rels+=1
+create branch=large-5 seconds=3.243 nodes+=1 rels+=1
+create branch=large-6 seconds=2.214 nodes+=1 rels+=1
+create branch=large-7 seconds=2.259 nodes+=1 rels+=1
+create branch=large-8 seconds=2.271 nodes+=1 rels+=1
+create branch=large-9 seconds=1.644 nodes+=1 rels+=1
+create branch=large-10 seconds=2.242 nodes+=1 rels+=1
+create branch=large-11 seconds=1.238 nodes+=1 rels+=1
+create branch=large-12 seconds=1.209 nodes+=1 rels+=1
+create branch=large-13 seconds=2.788 nodes+=1 rels+=1
+create branch=large-14 seconds=2.275 nodes+=1 rels+=1
+create branch=large-15 seconds=1.181 nodes+=1 rels+=1
+create branch=large-16 seconds=2.541 nodes+=1 rels+=1
+create branch=large-17 seconds=2.909 nodes+=1 rels+=1
+create branch=large-18 seconds=2.335 nodes+=1 rels+=1
+create branch=large-19 seconds=2.363 nodes+=1 rels+=1
+create branch=large-20 seconds=1.223 nodes+=1 rels+=1
+create branch=large-21 seconds=2.198 nodes+=1 rels+=1
+create branch=large-22 seconds=2.460 nodes+=1 rels+=1
+create branch=large-23 seconds=1.188 nodes+=1 rels+=1
+create branch=large-24 seconds=2.784 nodes+=1 rels+=1
+edit branch=large-0 devices=10 seconds=2.354 nodes+=1 rels+=10

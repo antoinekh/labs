@@ -1,0 +1,5 @@
+2026-10-27T17:49:20Z label=27-branches-small infrahub-server-1=2.977GiB task-worker-1=766.1MiB task-worker-2=525MiB database-1=1.742GiB 
+2026-10-27T18:00:58Z label=1-branch-after-restart infrahub-server-1=1.524GiB task-worker-1=402.7MiB task-worker-2=385.1MiB database-1=1.756GiB 
+2026-10-27T18:02:35Z label=26-branches infrahub-server-1=1.53GiB task-worker-1=408.8MiB task-worker-2=392.5MiB database-1=1.757GiB 
+2026-10-27T18:14:08Z label=after-net-large infrahub-server-1=1.681GiB task-worker-1=420.8MiB task-worker-2=406.9MiB database-1=1.938GiB 
+2026-10-27T18:15:47Z label=52-branches-large infrahub-server-1=1.692GiB task-worker-1=423.1MiB task-worker-2=408.8MiB database-1=1.936GiB 
