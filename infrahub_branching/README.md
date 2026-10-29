@@ -67,7 +67,17 @@ An empty Infrahub already holds 19,102 nodes and 51,281 relationships: the schem
 
 ### Add the checks repository
 
-Gitea runs next to Infrahub on the same Docker network, so the checks repository never leaves the laptop. Push the content of `checks-repo/` to `lab/network-checks` on Gitea, then add it in Infrahub (Integrations, Git Repositories) as a read-only repository on `http://gitea:3000/lab/network-checks.git`. Infrahub imports the check definitions within a minute.
+Gitea runs next to Infrahub on the same Docker network, so the checks repository never leaves the laptop. Create the `lab` user and the `network-checks` repository, then push the content of `checks-repo/`:
+
+```bash
+docker exec -u git infrahub-bench-gitea-1 gitea admin user create --username lab --password labpassword1 --email lab@example.com --must-change-password=false
+curl -u lab:labpassword1 -H 'Content-Type: application/json' -d '{"name": "network-checks"}' http://localhost:3000/api/v1/user/repos
+tmp=$(mktemp -d) && cp -r checks-repo/. "$tmp" && cd "$tmp"
+git init -b main && git add . && git commit -m "add the checks"
+git push http://lab:labpassword1@localhost:3000/lab/network-checks.git main
+```
+
+Then add it in Infrahub (Integrations, Git Repositories) as a read-only repository on `http://gitea:3000/lab/network-checks.git`. Infrahub imports the check definitions within a minute.
 
 To import a new commit, set that commit on the `network-checks` repository object, then create the branch: a branch created before the import keeps the old commit until you rebase it.
 
