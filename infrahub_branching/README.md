@@ -156,6 +156,9 @@ The first traversal queries on a new branch take about 16 s each, so the first r
 - In `results/setup/measures.log`, the first three lines (before 17:28) come from a first stack whose demo data load failed, and were taken before the checkpoint fix: their store sizes are wrong.
 - The first branch series (`results/create/bench-small.log`, `results/create/bench-small-20.log`) ran just after the `Net` schema load, while the workers reported the schema not in sync; the later series ran after a restart.
 - Most measurements are one series of 7 to 25 runs on one machine: read them as orders of magnitude, not as a benchmark.
+- Client times include the SDK polling; flow queue and run times come from the Prefect API.
+- Store sizes are taken 15 s after each step, with a 10 s checkpoint interval.
+- The internals described in the posts come from the source code of the tested version (tag `infrahub-v1.11.9`) and the Infrahub developer documentation.
 
 ## Stop and clean
 
