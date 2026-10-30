@@ -2,7 +2,7 @@
 
 Infrahub 1.11.9 with a small BGP backbone schema, up to 1,064 routers. Lab of two blog posts:
 
-- [Infrahub branching deep dive: inside the graph, the costs, and the limits](https://blog.antoinekh.dev/posts/infrahub-branching-cost/): what a branch costs (create, read, edit, diff, merge, delete), the raw Neo4j graph behind it, and a custom check that gates a maintenance change.
+- [Infrahub branching deep dive: inside the graph, the costs, and the limits](https://blog.antoinekh.dev/posts/infrahub-branching-cost/): what a branch costs (create, read, edit, diff, merge, delete), the raw Neo4j graph behind it, a custom check that gates a maintenance change, and the rollback of a bad merge.
 - [Which services sit behind this router? Infrahub Graph Traversal](https://blog.antoinekh.dev/posts/infrahub-graph-traversal/): the services behind a route reflector, and a PCI-DSS path rule as a check.
 
 No containerlab: the lab is the Infrahub release compose file, a Gitea server for the checks repository, and Python scripts that run in a task-worker container with the SDK of the image.
@@ -15,7 +15,7 @@ No containerlab: the lab is the Infrahub release compose file, a Gitea server fo
 | `run.sh` | Runs a command in a one-off task-worker container, with this folder on `/lab` |
 | `setup/` | The `Net` schema and the data generator |
 | `measure/` | The scripts behind every number of the first post |
-| `scenarios/` | The scripts of the demos: maintenance gate, Graph Traversal, PCI-DSS rule |
+| `scenarios/` | The scripts of the demos: maintenance gate, rollback, Graph Traversal, PCI-DSS rule |
 | `checks-repo/` | The Infrahub repository with the two checks and their queries |
 | `results/` | Raw logs, Prefect exports and screenshots, one folder per measurement |
 
@@ -111,6 +111,18 @@ On a branch `maint-rr-lys-01`, set `rr-lys-01` to `maintenance` in the UI and op
 
 Then press Retry all in the proposed change: the checks pass and the merge goes through. The conflict and the rebase of the post were done in the UI.
 
+### Rollback (first post)
+
+Infrahub 1.11.9 has no revert, so a rollback is a new branch that writes back the state of `main` before the bad merge. `rollback_demo.py` merges a bad cleanup through a proposed change: three Lyon services go to `low`, and `svc-pe-lys-02-2` is deleted. It prints the time before the merge.
+
+```bash
+./run.sh python /lab/scenarios/rollback_demo.py
+./run.sh python /lab/scenarios/rollback.py --before 2026-10-30T07:34:50Z --after 2026-10-30T07:40:00Z --branch rollback-cleanup-lys
+# open a proposed change from rollback-cleanup-lys, check the diff, merge it
+```
+
+`rollback.py` diffs `main` with itself between `--before` and `--after` (`DiffUpdate`, then `DiffTree`), reads each changed object on `main` at `--before`, and writes it back on the rollback branch: attributes set back, deleted objects created again (with a new id), added objects deleted. It reports relationships that differ from their state at `--before`.
+
 ### Services behind a router (second post)
 
 ```bash
@@ -151,6 +163,8 @@ The first traversal queries on a new branch take about 16 s each, so the first r
 | `scenarios/add_backup_rr.py` | On a branch, adds a session to a backup RR for every PE of a drained RR |
 | `scenarios/impact.py` | Application services reachable from a router (Graph Traversal API) |
 | `scenarios/pci_demo.py` | PCI-DSS rule demo: `firewalls` (on main), `onboard` and `fix` (on a branch) |
+| `scenarios/rollback_demo.py` | Merges a bad cleanup of the Lyon services, to have something to roll back |
+| `scenarios/rollback.py` | Builds a rollback branch from the diff of `main` between two times and its state before |
 | `checks-repo/.infrahub.yml` | Declares the two queries and the two checks |
 | `checks-repo/checks/route_reflector_redundancy.py` | No PE may keep fewer than two active route reflectors |
 | `checks-repo/checks/pci_firewalls.py` | Every path from a PCI-DSS service to a PE crosses a certified firewall |
@@ -158,6 +172,8 @@ The first traversal queries on a new branch take about 16 s each, so the first r
 ## Gotchas
 
 - **Demo data load at the default concurrency.** The first load failed halfway: one mutation returned HTTP 500 with the Neo4j error "The transaction read outdated data and cannot be recovered due to concurrent data modification. Retry the transaction." Infrahub passes the transient error to the client instead of retrying it, and the demo script is not idempotent, so reset the database and load again with `INFRAHUB_MAX_CONCURRENT_EXECUTION=1` (the SDK batch concurrency), as above.
+- **A diff of `main` between two times hides deletions.** In 1.11.9 it reports a deleted object as updated, with an empty label and a wrong old value, so `rollback.py` checks existence itself. `DiffTree` with the id of a merged proposed change returns the empty `main` side of the diff, not the branch side.
+- **Client timeout after a restart.** The server loads the schema of every branch at start-up, and the first mutations can pass the 60 s SDK timeout. Set `INFRAHUB_TIMEOUT=300` in the container (`docker compose -p infrahub-bench run --rm -v "$PWD:/lab" -e INFRAHUB_TIMEOUT=300 task-worker ...`).
 - **Store size on disk.** Neo4j writes its store files at a checkpoint, by default every 15 minutes, and the `db.checkpoint()` procedure is Enterprise only, so the size on disk does not move after a step. The override sets `db.checkpoint.interval.time` to 10 s.
 
 ## Notes on the results
